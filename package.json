@@ -6,8 +6,9 @@
   "scripts": {
     "start": "remotion studio",
     "render": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4",
-    "render:reel": "remotion render PromptForgeReel out/prompt-forge-reel.mp4",
-    "check": "tsc --noEmit"
+    "check": "tsc --noEmit",
+    "render:showcase": "remotion render EngineShowcase out/engine-showcase.mp4",
+    "render:slide": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",
