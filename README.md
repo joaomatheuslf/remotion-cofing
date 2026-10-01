@@ -2,49 +2,121 @@
 
 Motor de aulas animadas em **Remotion + React + TypeScript**.
 
-O objetivo deste repositório não é armazenar uma apresentação pronta. Ele fornece uma engine reutilizável: você descreve a aula como dados e a engine escolhe templates, animações e composição.
+O repositório não é uma apresentação fixa. Ele é uma engine reutilizável: o conteúdo da aula é descrito como dados e o motor escolhe o template visual, executa as animações e renderiza o vídeo.
 
 ## Canvas padrão
-- 1080×864 (5:4)
-- 30 fps
-- pensado para encaixar dentro de vídeos 1080×1920
+
+- **1080×864 (5:4)**
+- **30 fps**
+- pensado para encaixar em vídeos verticais 1080×1920 sem reconstruir cada animação
 
 ## Fluxo
+
 ```
-roteiro -> Lesson JSON/TS -> SceneRenderer -> template -> animações -> MP4
+roteiro
+  -> Lesson / Scene
+  -> SceneRenderer
+  -> template
+  -> componentes + movimento
+  -> Remotion
+  -> MP4
 ```
 
 ## Rodar
+
 ```bash
 npm install
 npm run start
 ```
 
+No Remotion Studio existem duas composições:
+
+- `PromptForgeSlide`: exemplo simples
+- `EngineShowcase`: demonstração dos templates genéricos
+
 ## Render
+
 ```bash
 npm run render
+npm run render:showcase
 ```
 
-## Criando uma aula
-Veja `src/lesson.example.ts`.
+## Templates implementados
 
-Cada cena possui:
-- `kind`: template visual
-- `duration`: segundos
-- `data`: conteúdo
-- `actions`: reservado para timeline dirigida por dados
+- `title` — abertura / capítulo
+- `explain` — explicação com ideia central + pontos
+- `prompt-anatomy` — partes coloridas de um prompt
+- `bad-vs-good` — comparação didática específica
+- `process` — fluxo em etapas
+- `comparison` — A vs B
+- `timeline` — linha do tempo
+- `before-after` — transformação
+- `simulation` — métricas e barras animadas
+- `diagram` — conceito central + nós
+- `error` — erros / debugging
+- `quiz` — questão com alternativas
+- `challenge` — missão prática
+- `summary` — fechamento / takeaways
 
-Templates iniciais:
-- `prompt-anatomy`
-- `bad-vs-good`
+## Exemplo de cena
 
-Arquitetura preparada para adicionar:
-- process
-- comparison
-- error
-- challenge
-- title
-- explain
+```ts
+{
+  id: "processo",
+  kind: "process",
+  title: "Como um prompt funciona",
+  duration: 6,
+  data: {
+    steps: [
+      {label: "Pedido", detail: "você descreve a tarefa"},
+      {label: "Contexto", detail: "o modelo recebe informações"},
+      {label: "Processamento", detail: "a IA organiza a resposta"},
+      {label: "Saída", detail: "o resultado é apresentado"}
+    ]
+  }
+}
+```
+
+## Arquivos principais
+
+```
+src/
+  engine/
+    types.ts
+    theme.ts
+    motion.ts
+    SceneRenderer.tsx
+    demoLesson.ts
+  templates/
+    PromptAnatomy.tsx
+    BadVsGood.tsx
+    GenericTemplates.tsx
+  components/
+    ui.tsx
+  LessonComposition.tsx
+  lesson.example.ts
+  root.tsx
+```
 
 ## Filosofia
-A engine separa **conteúdo**, **design** e **movimento**. Isso permite que uma IA gere apenas o schema da aula, sem precisar reescrever React a cada vídeo.
+
+A engine separa:
+
+1. **conteúdo** — o que ensinar;
+2. **design** — como a informação é organizada;
+3. **movimento** — como a atenção é conduzida;
+4. **timing** — quando cada elemento aparece.
+
+Assim, uma IA pode gerar apenas o schema da aula, sem reescrever React a cada vídeo.
+
+## Próximas camadas naturais
+
+- validação do schema com Zod;
+- carregamento de aulas por JSON;
+- sprites/personagens;
+- biblioteca de ícones;
+- áudio e legendas;
+- timeline dirigida por `actions`;
+- seleção automática de template;
+- assets gerados por IA;
+- render em lote.
