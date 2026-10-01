@@ -1,0 +1,44 @@
+{
+  "id": "aula-exemplo",
+  "title": "Aula gerada pelo diretor",
+  "segments": [
+    {
+      "id": "intro",
+      "intent": "open",
+      "title": "Título da aula",
+      "subtitle": "Uma frase curta de contexto"
+    },
+    {
+      "id": "conceito",
+      "intent": "explain",
+      "title": "Conceito principal",
+      "content": [
+        "A ideia central da explicação.",
+        "Primeiro ponto",
+        "Segundo ponto",
+        "Terceiro ponto"
+      ]
+    },
+    {
+      "id": "processo",
+      "intent": "sequence",
+      "title": "Como funciona",
+      "content": [
+        "Primeira etapa",
+        "Segunda etapa",
+        "Terceira etapa",
+        "Resultado"
+      ]
+    },
+    {
+      "id": "teste",
+      "intent": "check",
+      "title": "Teste rápido",
+      "quiz": {
+        "question": "Qual alternativa está correta?",
+        "options": ["A", "B", "C", "D"],
+        "answer": 1
+      }
+    }
+  ]
+}
