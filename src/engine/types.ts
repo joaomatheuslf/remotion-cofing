@@ -16,8 +16,14 @@ export type SceneKind =
   | "bad-vs-good"
   | "process"
   | "comparison"
+  | "timeline"
+  | "before-after"
+  | "simulation"
+  | "diagram"
   | "error"
-  | "challenge";
+  | "quiz"
+  | "challenge"
+  | "summary";
 
 export type SceneAction = {
   at: number; // segundos
