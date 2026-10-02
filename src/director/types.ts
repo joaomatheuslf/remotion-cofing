@@ -1,3 +1,5 @@
+import {DesignerId} from "../designers/types";
+
 export type TeachingIntent =
   | "open"
   | "explain"
@@ -45,12 +47,9 @@ export type BlueprintSegment = {
   title: string;
   intent: TeachingIntent;
   duration?: number;
-
   visualStyle?: VisualStyle;
   metaphor?: VisualMetaphor;
-
   content?: string[];
-
   subtitle?: string;
   kicker?: string;
   left?: ComparisonColumn;
@@ -59,12 +58,8 @@ export type BlueprintSegment = {
   metrics?: MetricSpec[];
   quiz?: QuizSpec;
   cta?: string;
-
-  // Cenas gamificadas.
   dialogue?: string;
   characterState?: "idle" | "thinking" | "happy" | "warning";
-
-  // Metáforas visuais.
   input?: string;
   output?: string;
   tokens?: string[];
@@ -77,5 +72,6 @@ export type BlueprintSegment = {
 export type LessonBlueprint = {
   id: string;
   title: string;
+  designerId?: DesignerId;
   segments: BlueprintSegment[];
 };
