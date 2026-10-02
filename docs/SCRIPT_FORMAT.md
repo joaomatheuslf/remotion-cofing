@@ -1,53 +1,103 @@
 # Formato de roteiro rápido
 
-Além de JSON, o motor aceita um outline textual simples.
-
 Cada cena começa com:
 
 ```
 ## [intent] Título da cena
 ```
 
-Exemplo:
-
-```md
-## [open] Prompt Forge
-kicker: AULA ANIMADA
-subtitle: Do pedido vago a uma instrução clara.
-
-## [explain] O que é um prompt?
-- É a instrução dada à IA.
-- Define o objetivo.
-- Dá contexto.
-- Orienta o formato.
-
-## [sequence] Como funciona
-- Você escreve.
-- O modelo recebe.
-- O modelo processa.
-- A resposta aparece.
-
-## [practice] Sua vez
-cta: COMEÇAR
-- Reescreva um pedido vago.
-- Defina objetivo.
-- Adicione contexto.
-- Escolha o formato.
-```
-
-Metadados suportados:
+## Metadados gerais
 
 - `subtitle:`
 - `kicker:`
 - `cta:`
 - `duration:`
+- `style:`
+- `dialogue:`
+- `character:`
 
-O parser está em `src/director/parseOutline.ts`.
+## Metáforas
 
+Use:
 
-## Cena gamificada em pixel art
+```
+metaphor: token-flow
+metaphor: prompt-builder
+metaphor: context-window
+metaphor: queue
+metaphor: counter-grid
+```
 
-Use uma cena `simulate` com `style: pixel-game`.
+Metadados adicionais:
+
+- `input:`
+- `output:`
+- `tokens:` — separados por `|`
+- `value:`
+- `unit:`
+- `capacity:`
+- `processor:`
+- `center:`
+
+## Exemplo — fluxo de tokens
+
+```md
+## [sequence] Como o prompt vira resposta
+metaphor: token-flow
+input: Explique redes neurais para iniciantes.
+tokens: Explique | redes | neurais | iniciantes
+output: Uma explicação adaptada.
+```
+
+## Exemplo — montagem
+
+```md
+## [decompose] Montando um prompt
+metaphor: prompt-builder
+output: PROMPT ESTRUTURADO
+- Papel
+- Objetivo
+- Contexto
+- Formato
+```
+
+## Exemplo — capacidade
+
+```md
+## [simulate] Janela de contexto
+metaphor: context-window
+capacity: 8
+center: JANELA DE CONTEXTO
+- system
+- histórico
+- arquivo
+- mensagem
+```
+
+## Exemplo — fila
+
+```md
+## [sequence] Processamento
+metaphor: queue
+processor: AGENTE
+output: FINALIZADO
+- pesquisar
+- resumir
+- revisar
+- publicar
+```
+
+## Exemplo — contador
+
+```md
+## [simulate] Escala acumulada
+metaphor: counter-grid
+value: 200750
+unit: vezes
+- repetições acumuladas
+```
+
+## Pixel game
 
 ```md
 ## [simulate] Qualidade do prompt
@@ -60,8 +110,4 @@ character: thinking
 - Precisão
 ```
 
-Metadados adicionais:
-
-- `style: pixel-game`
-- `dialogue:`
-- `character: idle | thinking | happy | warning`
+O parser está em `src/director/parseOutline.ts`.
