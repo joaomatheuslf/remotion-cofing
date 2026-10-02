@@ -1,5 +1,19 @@
 # Formato de roteiro rápido
 
+Você pode escolher o designer da aula antes da primeira cena:
+
+~~~
+designer: pixel-night
+~~~
+
+Valores atuais:
+
+- pixel-night
+- editorial-pop
+- clean-tech
+
+# Formato de roteiro rápido
+
 Cada cena começa com:
 
 ```
