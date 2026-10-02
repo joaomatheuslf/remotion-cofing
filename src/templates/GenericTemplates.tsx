@@ -9,8 +9,8 @@ import {
 import {BigTitle, Panel, Tag} from "../components/ui";
 import {theme} from "../engine/theme";
 
-const bodyFont = "Inter, Arial, sans-serif";
-const titleFont = "Arial Black, Arial, sans-serif";
+const bodyFont = theme.typography.body;
+const titleFont = theme.typography.title;
 
 const appear = (frame:number, fps:number, delayFrames:number) =>
   spring({
@@ -43,8 +43,7 @@ const SceneShell: React.FC<React.PropsWithChildren<{
   eyebrow?:string;
 }>> = ({title, eyebrow, children}) => (
   <AbsoluteFill style={{
-    background:
-      "radial-gradient(circle at 85% 10%, rgba(53,216,255,.12), transparent 34%), radial-gradient(circle at 10% 90%, rgba(255,104,190,.10), transparent 38%), #081426",
+    background: theme.backgrounds.scene,
     padding:52,
     fontFamily:bodyFont,
     color:theme.colors.white,
@@ -70,7 +69,7 @@ export const TitleScene: React.FC<{
 
   return (
     <AbsoluteFill style={{
-      background:"linear-gradient(145deg,#071224 0%,#10284a 60%,#1b2146 100%)",
+      background:theme.backgrounds.title,
       padding:64,
       fontFamily:bodyFont,
       color:"white",
@@ -288,11 +287,11 @@ export const SimulationScene: React.FC<{
         <Reveal>
           <Panel style={{
             height:"100%",display:"flex",flexDirection:"column",justifyContent:"center",alignItems:"center",
-            background:"#101b32",color:"white",
+            background:theme.colors.panel,color:theme.colors.white,
           }}>
             <div style={{
-              width:180,height:180,borderRadius:38,border:"5px solid #35d8ff",
-              boxShadow:"0 0 40px rgba(53,216,255,.25)",
+              width:180,height:180,borderRadius:38,border:`5px solid ${theme.colors.cyan}`,
+              boxShadow:"0 0 40px color-mix(in srgb, var(--pf-cyan) 25%, transparent)",
               display:"flex",alignItems:"center",justifyContent:"center",
               fontSize:82,
             }}>⚙</div>
