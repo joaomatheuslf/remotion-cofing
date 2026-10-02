@@ -6,6 +6,7 @@ import {engineDemoLesson} from "./engine/demoLesson";
 import {directorDemoLesson} from "./director/directorDemo";
 import {outlineDemoLesson} from "./director/outlineDemo";
 import {pixelDemoLesson} from "./engine/pixelDemo";
+import {metaphorDemoLesson} from "./engine/metaphorDemo";
 import {theme} from "./engine/theme";
 
 const frames = (seconds:number) => Math.round(seconds * 30);
@@ -58,6 +59,15 @@ export const Root: React.FC = () => (
       fps={30}
       durationInFrames={lessonDuration(pixelDemoLesson.scenes)}
       defaultProps={{lesson: pixelDemoLesson}}
+    />
+    <Composition
+      id="MetaphorDemo"
+      component={LessonComposition}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={lessonDuration(metaphorDemoLesson.scenes)}
+      defaultProps={{lesson: metaphorDemoLesson}}
     />
   </>
 );
