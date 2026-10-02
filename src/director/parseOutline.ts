@@ -25,6 +25,16 @@ const designerIds: DesignerId[] = [
   "pixel-night",
   "editorial-pop",
   "clean-tech",
+  "retro-science",
+  "blueprint",
+  "terminal-os",
+  "cyberpunk-neon",
+  "paper-cut",
+  "chalkboard",
+  "comic-book",
+  "glass-lab",
+  "corporate-gov",
+  "bauhaus",
 ];
 
 const isIntent = (value:string): value is TeachingIntent =>
