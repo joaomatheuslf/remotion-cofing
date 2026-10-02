@@ -4,6 +4,16 @@ export const DesignerIdSchema = z.enum([
   "pixel-night",
   "editorial-pop",
   "clean-tech",
+  "retro-science",
+  "blueprint",
+  "terminal-os",
+  "cyberpunk-neon",
+  "paper-cut",
+  "chalkboard",
+  "comic-book",
+  "glass-lab",
+  "corporate-gov",
+  "bauhaus",
 ]);
 
 export const SceneKindSchema = z.enum([
