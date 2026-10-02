@@ -1,12 +1,17 @@
-import {LessonBlueprint, TeachingIntent} from "./types";
+import {LessonBlueprint, TeachingIntent, VisualStyle} from "./types";
 
 const intents: TeachingIntent[] = [
   "open","explain","decompose","compare","sequence","timeline",
   "transform","simulate","map","debug","check","practice","recap",
 ];
 
+const styles: VisualStyle[] = ["default","pixel-game"];
+
 const isIntent = (value:string): value is TeachingIntent =>
   intents.includes(value as TeachingIntent);
+
+const isVisualStyle = (value:string): value is VisualStyle =>
+  styles.includes(value as VisualStyle);
 
 const slug = (value:string) =>
   value
@@ -25,6 +30,9 @@ type DraftSegment = {
   kicker?:string;
   cta?:string;
   duration?:number;
+  visualStyle?:VisualStyle;
+  dialogue?:string;
+  characterState?:"idle"|"thinking"|"happy"|"warning";
 };
 
 const headingPattern = /^##\s*\[([a-z-]+)\]\s*(.+)$/i;
@@ -66,13 +74,28 @@ export const parseOutline = (
 
     if(!current) continue;
 
-    const metadata = line.match(/^(subtitle|kicker|cta|duration):\s*(.+)$/i);
+    const metadata = line.match(
+      /^(subtitle|kicker|cta|duration|style|dialogue|character):\s*(.+)$/i
+    );
+
     if(metadata){
       const key = metadata[1].toLowerCase();
       const value = metadata[2].trim();
+
       if(key === "duration"){
         const duration = Number(value);
         if(Number.isFinite(duration) && duration > 0) current.duration = duration;
+      } else if(key === "style"){
+        if(!isVisualStyle(value)){
+          throw new Error(`Visual style desconhecido: ${value}`);
+        }
+        current.visualStyle = value;
+      } else if(key === "character"){
+        if(["idle","thinking","happy","warning"].includes(value)){
+          current.characterState = value as DraftSegment["characterState"];
+        }
+      } else if(key === "dialogue"){
+        current.dialogue = value;
       } else {
         (current as Record<string, unknown>)[key] = value;
       }
@@ -115,6 +138,9 @@ export const parseOutline = (
         kicker:draft.kicker,
         cta:draft.cta,
         duration:draft.duration,
+        visualStyle:draft.visualStyle,
+        dialogue:draft.dialogue,
+        characterState:draft.characterState,
       };
     }),
   };
