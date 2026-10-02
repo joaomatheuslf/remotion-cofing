@@ -2,6 +2,7 @@ import {Lesson, Scene} from "../engine/types";
 import {theme} from "../engine/theme";
 import {BlueprintSegment, LessonBlueprint} from "./types";
 import {selectTemplate} from "./selectTemplate";
+import {selectTemplateVariant} from "../templates/variants";
 
 const palette = [
   theme.colors.yellow,
@@ -212,12 +213,17 @@ const dataFor = (segment:BlueprintSegment, kind:Scene["kind"]) => {
 export const compileSegment = (segment:BlueprintSegment): Scene => {
   const kind = selectTemplate(segment);
 
+  const baseData=dataFor(segment, kind);
+  const seed=[...segment.id].reduce((sum,ch)=>sum+ch.charCodeAt(0),0);
   return {
     id: segment.id,
     kind,
     title: segment.title,
     duration: segment.duration ?? defaultDuration(kind),
-    data: dataFor(segment, kind),
+    data: {
+      ...baseData,
+      variant: selectTemplateVariant(kind,seed),
+    },
   };
 };
 
