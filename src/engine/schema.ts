@@ -1,5 +1,11 @@
 import {z} from "zod";
 
+export const DesignerIdSchema = z.enum([
+  "pixel-night",
+  "editorial-pop",
+  "clean-tech",
+]);
+
 export const SceneKindSchema = z.enum([
   "title",
   "explain",
@@ -43,6 +49,7 @@ export const SceneSchema = z.object({
 export const LessonSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
+  designerId: DesignerIdSchema.optional(),
   theme: z.literal("prompt-forge").optional(),
   scenes: z.array(SceneSchema).min(1),
 });
