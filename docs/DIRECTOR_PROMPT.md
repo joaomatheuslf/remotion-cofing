@@ -147,6 +147,16 @@ Designers disponíveis:
 - pixel-night
 - editorial-pop
 - clean-tech
+- retro-science
+- blueprint
+- terminal-os
+- cyberpunk-neon
+- paper-cut
+- chalkboard
+- comic-book
+- glass-lab
+- corporate-gov
+- bauhaus
 
 Escolha pelo contexto da aula, não por preferência política ou estética arbitrária:
 
@@ -155,3 +165,17 @@ Escolha pelo contexto da aula, não por preferência política ou estética arbi
 - clean-tech: institucional, corporativo e capacitação formal.
 
 O conteúdo e a estrutura das cenas devem continuar funcionando mesmo quando o designer mudar.
+
+
+### Guia de seleção visual
+
+- história, ciência e explicações conceituais: `retro-science`
+- arquitetura, infraestrutura e fluxos técnicos: `blueprint`
+- programação, terminal e DevOps: `terminal-os`
+- futuro, agentes e IA avançada: `cyberpunk-neon` ou `glass-lab`
+- educação leve e humana: `paper-cut` ou `chalkboard`
+- conteúdo de alto impacto: `comic-book`
+- setor público, jurídico ou corporativo: `corporate-gov` ou `clean-tech`
+- abstração geométrica e design autoral: `bauhaus`
+
+Use essas regras como ponto de partida. O tema da aula não deve limitar mecanicamente o designer.
