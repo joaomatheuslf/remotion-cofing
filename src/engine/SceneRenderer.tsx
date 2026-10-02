@@ -2,6 +2,7 @@ import React from "react";
 import {Scene} from "./types";
 import {PromptAnatomy} from "../templates/PromptAnatomy";
 import {BadVsGood} from "../templates/BadVsGood";
+import {GameSimulationScene} from "../templates/GameSimulation";
 import {
   BeforeAfterScene,
   ChallengeScene,
@@ -16,8 +17,6 @@ import {
   TimelineScene,
   TitleScene,
 } from "../templates/GenericTemplates";
-
-type StringMap = Record<string, unknown>;
 
 export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
   const data = scene.data ?? {};
@@ -82,6 +81,14 @@ export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
         metrics={(data.metrics ?? []) as Array<{label:string;value:number;color?:string;note?:string}>}
       />;
 
+    case "game-simulation":
+      return <GameSimulationScene
+        title={scene.title}
+        dialogue={data.dialogue ? String(data.dialogue) : undefined}
+        characterState={(data.characterState ?? "thinking") as "idle"|"thinking"|"happy"|"warning"}
+        metrics={(data.metrics ?? []) as Array<{label:string;value:number;color?:string;note?:string}>}
+      />;
+
     case "diagram":
       return <DiagramScene
         title={scene.title}
@@ -120,7 +127,9 @@ export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
 
     default: {
       const neverScene: never = scene.kind;
-      return <div style={{padding:50,fontSize:48}}>Template não implementado: {String(neverScene)}</div>;
+      return <div style={{padding:50,fontSize:48}}>
+        Template não implementado: {String(neverScene)}
+      </div>;
     }
   }
 };
