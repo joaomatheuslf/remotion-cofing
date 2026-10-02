@@ -1,6 +1,6 @@
 {
   "name": "remotion-cofing",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "private": true,
   "description": "Prompt Forge — engine de aulas animadas em Remotion",
   "scripts": {
@@ -16,7 +16,9 @@
     "render:designer:pixel": "remotion render DesignerPixelNight out/designer-pixel-night.mp4",
     "render:designer:editorial": "remotion render DesignerEditorialPop out/designer-editorial-pop.mp4",
     "render:designer:clean": "remotion render DesignerCleanTech out/designer-clean-tech.mp4",
-    "render:designers": "remotion render DesignerGallery out/designer-gallery.mp4"
+    "render:designers": "remotion render DesignerGallery out/designer-gallery.mp4",
+    "designer:new": "node scripts/create-designer.mjs",
+    "render:storyboard": "remotion render StoryboardDemo out/storyboard-demo.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",
