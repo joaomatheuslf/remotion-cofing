@@ -45,15 +45,14 @@ export const SceneSchema = z.object({
   title: z.string().min(1),
   duration: z.number().positive().max(120),
   data: z.record(z.string(), z.unknown()).optional(),
-  actions: z.array(z.object({
-    at: z.number().nonnegative(),
-    target: z.string().min(1),
-    animation: z.enum([
-      "pop","slide-up","slide-left","fade","shake",
-      "pulse","typewriter","progress","highlight",
-    ]),
-    duration: z.number().positive().optional(),
-  })).optional(),
+  actions: z.array(z.discriminatedUnion("type", [
+    z.object({type:z.literal("show"),target:z.string(),at:z.number().nonnegative()}),
+    z.object({type:z.literal("hide"),target:z.string(),at:z.number().nonnegative()}),
+    z.object({type:z.literal("animate"),target:z.string(),at:z.number().nonnegative(),duration:z.number().positive().optional(),animation:z.string()}),
+    z.object({type:z.literal("character"),target:z.literal("presenter"),at:z.number().nonnegative(),state:z.string()}),
+    z.object({type:z.literal("camera"),at:z.number().nonnegative(),duration:z.number().positive().optional(),action:z.enum(["zoom-in","zoom-out","pan-left","pan-right"])}),
+    z.object({type:z.literal("cue"),at:z.number().nonnegative(),cue:z.string()}),
+  ])).optional(),
 });
 
 export const LessonSchema = z.object({
