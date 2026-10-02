@@ -4,6 +4,7 @@ import {
   VisualMetaphor,
   VisualStyle,
 } from "./types";
+import {DesignerId} from "../designers/types";
 
 const intents: TeachingIntent[] = [
   "open","explain","decompose","compare","sequence","timeline",
@@ -20,6 +21,12 @@ const metaphors: VisualMetaphor[] = [
   "counter-grid",
 ];
 
+const designerIds: DesignerId[] = [
+  "pixel-night",
+  "editorial-pop",
+  "clean-tech",
+];
+
 const isIntent = (value:string): value is TeachingIntent =>
   intents.includes(value as TeachingIntent);
 
@@ -28,6 +35,9 @@ const isVisualStyle = (value:string): value is VisualStyle =>
 
 const isMetaphor = (value:string): value is VisualMetaphor =>
   metaphors.includes(value as VisualMetaphor);
+
+const isDesignerId = (value:string): value is DesignerId =>
+  designerIds.includes(value as DesignerId);
 
 const slug = (value:string) =>
   value
@@ -70,6 +80,7 @@ export const parseOutline = (
   const lines = source.split(/\r?\n/);
   const drafts: DraftSegment[] = [];
   let current: DraftSegment | null = null;
+  let designerId: DesignerId | undefined;
 
   const flush = () => {
     if(current){
@@ -81,6 +92,15 @@ export const parseOutline = (
   for(const raw of lines){
     const line = raw.trim();
     if(!line) continue;
+
+    if (!current && line.toLowerCase().startsWith("designer:")) {
+      const candidate=line.slice("designer:".length).trim();
+      if(!isDesignerId(candidate)){
+        throw new Error("Designer desconhecido: " + candidate);
+      }
+      designerId=candidate;
+      continue;
+    }
 
     const heading = line.match(headingPattern);
     if(heading){
@@ -174,6 +194,7 @@ export const parseOutline = (
   return {
     id: lessonId,
     title: lessonTitle,
+    designerId,
     segments: drafts.map((draft) => {
       const base = slug(draft.title);
       const count = used.get(base) ?? 0;
