@@ -146,3 +146,17 @@ A galeria percorre todos os designers usando os mesmos componentes de referênci
 - composição visual forte: bauhaus
 
 Essas associações são apenas direções de arte; qualquer designer pode ser usado em qualquer aula.
+
+
+## Presenter policy
+
+Designer muda a linguagem visual, não a identidade do apresentador.
+
+Quando houver humano principal, use João como padrão. A policy detalhada está em:
+
+```
+src/presenter/designerPolicy.ts
+docs/PRESENTER_REFERENCE.md
+```
+
+Os designers `blueprint` e `bauhaus` podem funcionar sem personagem. Nos demais, quando a composição pedir host/professor/avatar, represente João e preserve as âncoras faciais.
