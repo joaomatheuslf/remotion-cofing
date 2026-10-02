@@ -19,7 +19,7 @@ transcrição / roteiro
         ↓
  Lesson Blueprint
         ↓
- seleção de template
+template / metáfora
         ↓
   Lesson / Scene
         ↓
@@ -32,11 +32,12 @@ transcrição / roteiro
        MP4
 ```
 
-A engine agora possui três camadas:
+A engine possui quatro camadas:
 
-1. **Director** — decide a intenção pedagógica e o tipo de visual.
+1. **Director** — decide intenção pedagógica e representação visual.
 2. **Engine visual** — renderiza layouts e movimentos reutilizáveis.
-3. **Pixel Game Layer** — permite cenas gamificadas como nas referências.
+3. **Pixel Game Layer** — cria cenas gamificadas com personagem, robô e HUD.
+4. **Metaphor Library** — explica fluxo, capacidade, fila, montagem e escala com movimento.
 
 ## Rodar
 
@@ -52,6 +53,7 @@ npm run start
 - `DirectorDemo` — aula compilada a partir de Blueprint
 - `OutlineDemo` — aula criada a partir de outline textual
 - `PixelGameDemo` — explainer gamificado em pixel art
+- `MetaphorDemo` — showcase das metáforas animadas
 
 ## Render
 
@@ -61,47 +63,76 @@ npm run render:showcase
 npm run render:director
 npm run render:outline
 npm run render:pixel
+npm run render:metaphors
 ```
 
-## Templates
-
-- `title`
-- `explain`
-- `prompt-anatomy`
-- `bad-vs-good`
-- `process`
-- `comparison`
-- `timeline`
-- `before-after`
-- `simulation`
-- `game-simulation`
-- `diagram`
-- `error`
-- `quiz`
-- `challenge`
-- `summary`
-
-## Intenções do Director
+## Templates principais
 
 ```
-open       -> title
-explain    -> explain
-decompose  -> diagram / prompt-anatomy
-compare    -> comparison
-sequence   -> process
-timeline   -> timeline
-transform  -> before-after
-simulate   -> simulation
-map        -> diagram
-debug      -> error
-check      -> quiz
-practice   -> challenge
-recap      -> summary
+title
+explain
+prompt-anatomy
+bad-vs-good
+process
+comparison
+timeline
+before-after
+simulation
+game-simulation
+diagram
+error
+quiz
+challenge
+summary
 ```
 
-### Pixel game
+## Metáforas visuais
 
-Uma cena `simulate` pode pedir explicitamente:
+```
+token-flow       prompt → tokens → modelo → saída
+prompt-builder   peças entram e montam uma estrutura
+context-window   itens ocupam uma capacidade limitada
+queue            itens aguardam e são processados um a um
+counter-grid     uma quantidade cresce e ganha escala visual
+```
+
+Documentação detalhada:
+
+```
+docs/METAPHORS.md
+```
+
+### Exemplo: fluxo de tokens
+
+```ts
+{
+  intent: "sequence",
+  metaphor: "token-flow",
+  title: "Como o prompt atravessa o modelo",
+  input: "Explique redes neurais",
+  tokens: ["Explique", "redes", "neurais"],
+  output: "Resposta gerada"
+}
+```
+
+### Exemplo: janela de contexto
+
+```ts
+{
+  intent: "simulate",
+  metaphor: "context-window",
+  title: "A janela de contexto tem limite",
+  capacity: 8,
+  content: [
+    "system",
+    "histórico",
+    "arquivo",
+    "mensagem"
+  ]
+}
+```
+
+## Pixel game
 
 ```ts
 {
@@ -118,34 +149,29 @@ Uma cena `simulate` pode pedir explicitamente:
 }
 ```
 
-O Director converte isso para `game-simulation`.
-
 ## Roteiro textual rápido
 
-Também existe um formato simples:
-
 ```md
-## [open] Prompt Forge
-subtitle: Do pedido vago a uma instrução clara.
+## [sequence] Como o prompt vira resposta
+metaphor: token-flow
+input: Explique redes neurais para iniciantes.
+tokens: Explique | redes | neurais | iniciantes
+output: Uma explicação adaptada ao pedido.
 
-## [explain] O que é um prompt?
-- É a instrução dada à IA.
-- Define o objetivo.
-- Dá contexto.
+## [simulate] Janela de contexto
+metaphor: context-window
+capacity: 8
+- system
+- histórico
+- arquivo A
+- arquivo B
+- mensagem atual
 
-## [simulate] Qualidade do prompt
-style: pixel-game
-dialogue: Veja como a clareza muda o resultado.
-character: thinking
-- Clareza
-- Contexto
-- Formato
-
-## [practice] Sua vez
-cta: FORJAR PROMPT
-- Reescreva um pedido vago.
-- Defina o objetivo.
-- Adicione contexto.
+## [simulate] Escala
+metaphor: counter-grid
+value: 200750
+unit: vezes
+- repetições acumuladas
 ```
 
 O parser está em:
@@ -154,23 +180,21 @@ O parser está em:
 src/director/parseOutline.ts
 ```
 
-## Prompt para um LLM Director
+## Director para LLM
 
-O contrato recomendado para transformar transcrição em Blueprint está em:
+O contrato recomendado para transformar uma transcrição em Blueprint está em:
 
 ```
 docs/DIRECTOR_PROMPT.md
 ```
 
-E o formato textual está em:
+Formato textual:
 
 ```
 docs/SCRIPT_FORMAT.md
 ```
 
 ## Validação
-
-Aula gerada por IA pode ser validada antes do render:
 
 ```ts
 import {parseLesson} from "./engine/schema";
@@ -187,9 +211,6 @@ src/
     selectTemplate.ts
     compileLesson.ts
     parseOutline.ts
-    promptLessonBlueprint.ts
-    directorDemo.ts
-    outlineDemo.ts
 
   engine/
     types.ts
@@ -197,24 +218,26 @@ src/
     theme.ts
     motion.ts
     SceneRenderer.tsx
-    demoLesson.ts
     pixelDemo.ts
+    metaphorDemo.ts
 
   templates/
     GenericTemplates.tsx
     PromptAnatomy.tsx
     BadVsGood.tsx
     GameSimulation.tsx
+    MetaphorScenes.tsx
 
   components/
     ui.tsx
     PixelCharacter.tsx
     GameHud.tsx
+    MetaphorKit.tsx
 
 docs/
   DIRECTOR_PROMPT.md
   SCRIPT_FORMAT.md
-  lesson-blueprint.example.json
+  METAPHORS.md
 ```
 
 ## Estado atual
@@ -222,23 +245,23 @@ docs/
 Já existe:
 
 - engine de cenas;
-- 15 tipos de template;
 - Director por intenção pedagógica;
+- seleção de template;
+- seleção explícita e heurística de metáforas;
 - compilador Blueprint → Lesson;
 - parser de outline textual;
 - schema Zod;
-- personagem e robô pixel art;
-- HUD gamificado;
-- demo completa de pixel explainer;
+- camada pixel game;
+- biblioteca de 5 metáforas animadas;
+- demos separadas no Remotion Studio;
 - CI com TypeScript.
 
-## Próximos passos
+## Próximas camadas
 
-- timeline dirigida por `actions`;
+- timeline realmente dirigida por `actions`;
 - sprites externos e biblioteca de assets;
 - legendas sincronizadas;
 - áudio/narração;
-- sistema de temas;
-- escolha automática de metáfora visual;
+- temas múltiplos;
 - integração direta com LLM;
 - render em lote.
