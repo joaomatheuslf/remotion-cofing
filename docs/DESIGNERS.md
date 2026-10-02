@@ -4,11 +4,21 @@ O Designer controla a identidade visual da aula sem alterar o conteúdo ou o tem
 
 A mesma cena pode usar Pixel Night, Editorial Pop ou Clean Tech sem reescrever o roteiro.
 
-## Designers iniciais
+## Designers disponíveis
 
 - pixel-night — game explainer escuro, chunky e neon
 - editorial-pop — infográfico editorial, papel quente e cores vibrantes
 - clean-tech — institucional claro, moderno e discreto
+- retro-science — pôster científico vintage e papel envelhecido
+- blueprint — prancha técnica azul e linguagem de engenharia
+- terminal-os — console preto/verde e estética CLI
+- cyberpunk-neon — magenta/ciano, futurista e energético
+- paper-cut — papéis recortados, pastel e artesanal
+- chalkboard — quadro verde e linguagem de aula desenhada
+- comic-book — quadrinhos pop, halftone e alto impacto
+- glass-lab — laboratório digital, vidro e brilho suave
+- corporate-gov — institucional sóbrio em azul-marinho e dourado
+- bauhaus — geometria modernista e blocos primários
 
 ## Estrutura
 
@@ -105,3 +115,34 @@ template padrão da engine
 Se não existir override, a engine usa o template normal com os tokens do designer.
 
 Isso evita forks do motor e deixa novos designers realmente expansíveis.
+
+
+## Galeria visual
+
+Abra no Remotion Studio:
+
+~~~
+DesignerGallery
+~~~
+
+ou renderize:
+
+~~~bash
+npm run render:designers
+~~~
+
+A galeria percorre todos os designers usando os mesmos componentes de referência. Isso facilita comparar paleta, tipografia, bordas, sombras e linguagem de movimento sem mudar o conteúdo.
+
+## Sugestões de uso
+
+- tecnologia gamificada: pixel-night
+- conteúdo editorial/social: editorial-pop ou comic-book
+- capacitação institucional: clean-tech ou corporate-gov
+- história/ciência: retro-science
+- arquitetura/sistemas: blueprint
+- programação/DevOps: terminal-os
+- futuro/IA avançada: cyberpunk-neon ou glass-lab
+- educação leve: paper-cut ou chalkboard
+- composição visual forte: bauhaus
+
+Essas associações são apenas direções de arte; qualquer designer pode ser usado em qualquer aula.
