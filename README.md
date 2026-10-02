@@ -2,38 +2,41 @@
 
 Motor de aulas animadas em **Remotion + React + TypeScript**.
 
-O repositório não é uma apresentação fixa. Ele é uma engine reutilizável: o conteúdo da aula é descrito como dados e o motor escolhe o template visual, executa as animações e renderiza o vídeo.
+A proposta é criar aulas como **dados + direção visual**, e não escrever uma nova animação do zero para cada roteiro.
 
-## Canvas padrão
+## Canvas
 
 - **1080×864 (5:4)**
 - **30 fps**
-- pensado para encaixar em vídeos verticais 1080×1920 sem reconstruir cada animação
+- pensado para encaixar dentro de vídeo 1080×1920
 
-## Arquitetura atual
+## Arquitetura
 
 ```
-Lesson Blueprint
-      ↓
-Director
-      ↓
-seleção de template
-      ↓
-Lesson / Scene
-      ↓
-SceneRenderer
-      ↓
-templates + motion
-      ↓
-Remotion
-      ↓
-MP4
+transcrição / roteiro
+        ↓
+     Director
+        ↓
+ Lesson Blueprint
+        ↓
+ seleção de template
+        ↓
+  Lesson / Scene
+        ↓
+  SceneRenderer
+        ↓
+ templates + motion
+        ↓
+     Remotion
+        ↓
+       MP4
 ```
 
-Agora existem duas camadas independentes:
+A engine agora possui três camadas:
 
-1. **Engine visual** — sabe desenhar e animar cenas.
-2. **Director** — recebe a intenção pedagógica e decide qual tipo de cena usar.
+1. **Director** — decide a intenção pedagógica e o tipo de visual.
+2. **Engine visual** — renderiza layouts e movimentos reutilizáveis.
+3. **Pixel Game Layer** — permite cenas gamificadas como nas referências.
 
 ## Rodar
 
@@ -42,60 +45,43 @@ npm install
 npm run start
 ```
 
-No Remotion Studio existem quatro composições:
+## Composições no Remotion Studio
 
-- `PromptForgeSlide` — exemplo básico;
-- `EngineShowcase` — showcase dos templates;
-- `DirectorDemo` — uma aula montada automaticamente pelo Director.\n- `OutlineDemo` — uma aula criada a partir de um roteiro textual simples.
+- `PromptForgeSlide` — exemplo inicial
+- `EngineShowcase` — showcase dos templates
+- `DirectorDemo` — aula compilada a partir de Blueprint
+- `OutlineDemo` — aula criada a partir de outline textual
+- `PixelGameDemo` — explainer gamificado em pixel art
 
 ## Render
 
 ```bash
 npm run render
 npm run render:showcase
-npm run render:director\nnpm run render:outline
+npm run render:director
+npm run render:outline
+npm run render:pixel
 ```
 
-## Templates implementados
+## Templates
 
-- `title` — abertura / capítulo
-- `explain` — explicação com ideia central + pontos
-- `prompt-anatomy` — anatomia colorida de um prompt
-- `bad-vs-good` — prompt ruim vs bom
-- `process` — fluxo em etapas
-- `comparison` — A vs B
-- `timeline` — linha do tempo
-- `before-after` — transformação
-- `simulation` — métricas e barras animadas
-- `diagram` — conceito central + nós
-- `error` — debugging / erros
-- `quiz` — pergunta e alternativas
-- `challenge` — missão prática
-- `summary` — fechamento / takeaways
+- `title`
+- `explain`
+- `prompt-anatomy`
+- `bad-vs-good`
+- `process`
+- `comparison`
+- `timeline`
+- `before-after`
+- `simulation`
+- `game-simulation`
+- `diagram`
+- `error`
+- `quiz`
+- `challenge`
+- `summary`
 
-## Director
-
-O Director trabalha com **intenções pedagógicas**, não com nomes de componentes.
-
-Exemplo:
-
-```ts
-{
-  id: "fluxo",
-  intent: "sequence",
-  title: "Como um prompt funciona",
-  content: [
-    "Você descreve o pedido",
-    "O modelo recebe o contexto",
-    "A instrução é processada",
-    "A resposta é construída"
-  ]
-}
-```
-
-A intenção `sequence` é convertida automaticamente para uma cena `process`.
-
-Intenções disponíveis:
+## Intenções do Director
 
 ```
 open       -> title
@@ -113,33 +99,78 @@ practice   -> challenge
 recap      -> summary
 ```
 
-Para prompts, `decompose` possui uma regra especial: se o conteúdo tratar de papel, contexto, formato etc., o Director seleciona `prompt-anatomy`.
+### Pixel game
 
-## Blueprint completo
-
-Veja:
-
-```
-src/director/promptLessonBlueprint.ts
-```
-
-e um exemplo independente em JSON:
-
-```
-docs/lesson-blueprint.example.json
-```
-
-O blueprint é compilado assim:
+Uma cena `simulate` pode pedir explicitamente:
 
 ```ts
-import {compileLesson} from "./director/compileLesson";
-
-const lesson = compileLesson(blueprint);
+{
+  intent: "simulate",
+  visualStyle: "pixel-game",
+  title: "Qualidade do prompt",
+  dialogue: "Quanto mais claro o comando, menos a IA precisa adivinhar.",
+  characterState: "thinking",
+  metrics: [
+    {label:"Clareza", value:92},
+    {label:"Contexto", value:81},
+    {label:"Formato", value:88}
+  ]
+}
 ```
 
-## Roteiro textual rápido\n\nAlém de Blueprint em TypeScript/JSON, o motor agora possui `parseOutline()`. Ele converte um roteiro marcado como `## [intent] Título` em Blueprint.\n\nDocumentação e prompt para o LLM:\n\n```\ndocs/SCRIPT_FORMAT.md\ndocs/DIRECTOR_PROMPT.md\n```\n\nIsso permite o fluxo:\n\n```\ntranscrição\n  -> LLM Director\n  -> outline/JSON\n  -> parser + compiler\n  -> engine visual\n```\n\n## Validação
+O Director converte isso para `game-simulation`.
 
-A engine já possui schema Zod:
+## Roteiro textual rápido
+
+Também existe um formato simples:
+
+```md
+## [open] Prompt Forge
+subtitle: Do pedido vago a uma instrução clara.
+
+## [explain] O que é um prompt?
+- É a instrução dada à IA.
+- Define o objetivo.
+- Dá contexto.
+
+## [simulate] Qualidade do prompt
+style: pixel-game
+dialogue: Veja como a clareza muda o resultado.
+character: thinking
+- Clareza
+- Contexto
+- Formato
+
+## [practice] Sua vez
+cta: FORJAR PROMPT
+- Reescreva um pedido vago.
+- Defina o objetivo.
+- Adicione contexto.
+```
+
+O parser está em:
+
+```
+src/director/parseOutline.ts
+```
+
+## Prompt para um LLM Director
+
+O contrato recomendado para transformar transcrição em Blueprint está em:
+
+```
+docs/DIRECTOR_PROMPT.md
+```
+
+E o formato textual está em:
+
+```
+docs/SCRIPT_FORMAT.md
+```
+
+## Validação
+
+Aula gerada por IA pode ser validada antes do render:
 
 ```ts
 import {parseLesson} from "./engine/schema";
@@ -147,9 +178,7 @@ import {parseLesson} from "./engine/schema";
 const lesson = parseLesson(input);
 ```
 
-Isso permite receber uma aula produzida por IA e rejeitar estruturas inválidas antes do render.
-
-## Estrutura
+## Estrutura principal
 
 ```
 src/
@@ -157,8 +186,10 @@ src/
     types.ts
     selectTemplate.ts
     compileLesson.ts
+    parseOutline.ts
     promptLessonBlueprint.ts
-    directorDemo.ts\n    parseOutline.ts\n    outlineDemo.ts
+    directorDemo.ts
+    outlineDemo.ts
 
   engine/
     types.ts
@@ -167,51 +198,47 @@ src/
     motion.ts
     SceneRenderer.tsx
     demoLesson.ts
+    pixelDemo.ts
 
   templates/
+    GenericTemplates.tsx
     PromptAnatomy.tsx
     BadVsGood.tsx
-    GenericTemplates.tsx
+    GameSimulation.tsx
 
   components/
     ui.tsx
-
-  LessonComposition.tsx
-  root.tsx
+    PixelCharacter.tsx
+    GameHud.tsx
 
 docs/
-  lesson-blueprint.example.json\n  DIRECTOR_PROMPT.md\n  SCRIPT_FORMAT.md
+  DIRECTOR_PROMPT.md
+  SCRIPT_FORMAT.md
+  lesson-blueprint.example.json
 ```
 
-## Objetivo do projeto
+## Estado atual
 
-A meta não é pedir a uma IA para escrever uma animação React inteira a cada aula.
+Já existe:
 
-A meta é chegar a:
+- engine de cenas;
+- 15 tipos de template;
+- Director por intenção pedagógica;
+- compilador Blueprint → Lesson;
+- parser de outline textual;
+- schema Zod;
+- personagem e robô pixel art;
+- HUD gamificado;
+- demo completa de pixel explainer;
+- CI com TypeScript.
 
-```
-transcrição / roteiro
-        ↓
-IA cria blueprint
-        ↓
-Director decide linguagem visual
-        ↓
-Engine executa
-        ↓
-vídeo animado
-```
+## Próximos passos
 
-Assim, o conteúdo muda constantemente, mas a identidade visual e o comportamento das animações permanecem consistentes.
-
-## Próximas camadas
-
-- parser de roteiro/transcrição para Blueprint;
 - timeline dirigida por `actions`;
-- sprites e personagens reutilizáveis;
-- biblioteca de assets;
-- legenda sincronizada;
+- sprites externos e biblioteca de assets;
+- legendas sincronizadas;
 - áudio/narração;
-- render em lote;
 - sistema de temas;
-- seleção de metáforas visuais;
-- integração com um LLM para planejamento das cenas.
+- escolha automática de metáfora visual;
+- integração direta com LLM;
+- render em lote.
