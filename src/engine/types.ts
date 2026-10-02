@@ -1,3 +1,5 @@
+import {DesignerId} from "../designers/types";
+
 export type AnimationName =
   | "pop"
   | "slide-up"
@@ -50,6 +52,7 @@ export type Scene = {
 export type Lesson = {
   id: string;
   title: string;
+  designerId?: DesignerId;
   theme?: "prompt-forge";
   scenes: Scene[];
 };
