@@ -4,6 +4,13 @@ import {PromptAnatomy} from "../templates/PromptAnatomy";
 import {BadVsGood} from "../templates/BadVsGood";
 import {GameSimulationScene} from "../templates/GameSimulation";
 import {
+  ContextWindowScene,
+  CounterGridScene,
+  PromptBuilderScene,
+  QueueScene,
+  TokenFlowScene,
+} from "../templates/MetaphorScenes";
+import {
   BeforeAfterScene,
   ChallengeScene,
   ComparisonScene,
@@ -87,6 +94,47 @@ export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
         dialogue={data.dialogue ? String(data.dialogue) : undefined}
         characterState={(data.characterState ?? "thinking") as "idle"|"thinking"|"happy"|"warning"}
         metrics={(data.metrics ?? []) as Array<{label:string;value:number;color?:string;note?:string}>}
+      />;
+
+    case "token-flow":
+      return <TokenFlowScene
+        title={scene.title}
+        input={String(data.input ?? "")}
+        tokens={(data.tokens ?? []) as string[]}
+        output={String(data.output ?? "")}
+        modelLabel={data.modelLabel ? String(data.modelLabel) : undefined}
+      />;
+
+    case "prompt-builder":
+      return <PromptBuilderScene
+        title={scene.title}
+        parts={(data.parts ?? []) as string[]}
+        result={data.result ? String(data.result) : undefined}
+      />;
+
+    case "context-window":
+      return <ContextWindowScene
+        title={scene.title}
+        items={(data.items ?? []) as string[]}
+        capacity={typeof data.capacity === "number" ? data.capacity : undefined}
+        label={data.label ? String(data.label) : undefined}
+      />;
+
+    case "queue":
+      return <QueueScene
+        title={scene.title}
+        items={(data.items ?? []) as string[]}
+        processor={data.processor ? String(data.processor) : undefined}
+        outputLabel={data.outputLabel ? String(data.outputLabel) : undefined}
+      />;
+
+    case "counter-grid":
+      return <CounterGridScene
+        title={scene.title}
+        value={typeof data.value === "number" ? data.value : 0}
+        label={String(data.label ?? "")}
+        unit={data.unit ? String(data.unit) : undefined}
+        cells={typeof data.cells === "number" ? data.cells : undefined}
       />;
 
     case "diagram":
