@@ -1,6 +1,7 @@
 {
   "id": "aula-exemplo",
   "title": "Aula gerada pelo diretor",
+  "designerId": "editorial-pop",
   "segments": [
     {
       "id": "intro",
