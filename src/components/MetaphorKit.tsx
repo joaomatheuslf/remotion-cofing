@@ -13,10 +13,9 @@ export const MetaphorShell: React.FC<React.PropsWithChildren<{
     padding:48,
     position:"relative",
     overflow:"hidden",
-    background:
-      "radial-gradient(circle at 85% 12%, rgba(53,216,255,.13), transparent 28%), radial-gradient(circle at 8% 90%, rgba(255,104,190,.11), transparent 32%), #081426",
-    color:"#fff",
-    fontFamily:"Inter, Arial, sans-serif",
+    background:theme.backgrounds.scene,
+    color:theme.colors.text,
+    fontFamily:theme.typography.body,
   }}>
     <div style={{
       display:"inline-block",
@@ -32,7 +31,7 @@ export const MetaphorShell: React.FC<React.PropsWithChildren<{
     }}>{eyebrow}</div>
     <div style={{
       marginTop:20,
-      fontFamily:"Arial Black, Arial, sans-serif",
+      fontFamily:theme.typography.title,
       fontSize:54,
       lineHeight:.98,
       letterSpacing:-2,
@@ -63,9 +62,9 @@ export const FlowNode: React.FC<React.PropsWithChildren<{
     width,
     height,
     border:"5px solid #101419",
-    borderRadius:22,
+    borderRadius:theme.radius,
     boxShadow:"8px 8px 0 #101419",
-    background:"#fff4da",
+    background:theme.backgrounds.panel,
     color:theme.colors.ink,
     padding:18,
     boxSizing:"border-box",
@@ -115,7 +114,7 @@ export const TokenChip: React.FC<{
     background:color,
     border:"4px solid #101419",
     boxShadow:"4px 4px 0 #101419",
-    borderRadius:999,
+    borderRadius:theme.tagRadius,
     color:theme.colors.ink,
     fontSize:16,
     fontWeight:950,
