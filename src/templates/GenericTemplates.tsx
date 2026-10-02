@@ -8,6 +8,7 @@ import {
 } from "remotion";
 import {BigTitle, Panel, Tag} from "../components/ui";
 import {theme} from "../engine/theme";
+import {useDesignerEnter} from "../designers/motion";
 
 const bodyFont = theme.typography.body;
 const titleFont = theme.typography.title;
@@ -24,13 +25,10 @@ const Reveal: React.FC<React.PropsWithChildren<{
   delay?: number;
   style?: React.CSSProperties;
 }>> = ({children, index=0, delay=0, style}) => {
-  const frame = useCurrentFrame();
-  const {fps} = useVideoConfig();
-  const p = appear(frame, fps, Math.round(delay * fps) + index * Math.round(.18 * fps));
+  const enter=useDesignerEnter(delay,index);
   return (
     <div style={{
-      opacity: p,
-      transform: `translateY(${(1-p)*28}px) scale(${.96+p*.04})`,
+      ...enter.style,
       ...style,
     }}>
       {children}
