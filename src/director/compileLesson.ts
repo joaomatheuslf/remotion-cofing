@@ -14,7 +14,9 @@ const defaultDuration = (kind:Scene["kind"]) => {
   switch(kind){
     case "title": return 4;
     case "quiz": return 6;
-    case "simulation": return 6;
+    case "simulation":
+    case "game-simulation":
+      return 6;
     default: return 5;
   }
 };
@@ -35,6 +37,15 @@ const splitBeforeAfter = (items:string[]) => ({
     body: items[1] ?? "Estado final",
   },
 });
+
+const makeMetrics = (segment:BlueprintSegment) => {
+  const content = segment.content ?? [];
+  return segment.metrics ?? content.map((label, i) => ({
+    label,
+    value: Math.min(100, 55 + i * 12),
+    color: palette[i % palette.length],
+  }));
+};
 
 const dataFor = (segment:BlueprintSegment, kind:Scene["kind"]) => {
   const content = segment.content ?? [];
@@ -90,11 +101,17 @@ const dataFor = (segment:BlueprintSegment, kind:Scene["kind"]) => {
     case "simulation":
       return {
         status: "SIMULAÇÃO",
-        metrics: segment.metrics ?? content.map((label, i) => ({
-          label,
-          value: Math.min(100, 55 + i * 12),
-          color: palette[i % palette.length],
-        })),
+        metrics: makeMetrics(segment),
+      };
+
+    case "game-simulation":
+      return {
+        dialogue:
+          segment.dialogue ??
+          segment.subtitle ??
+          "Observe como o estado muda enquanto a explicação avança.",
+        characterState: segment.characterState ?? "thinking",
+        metrics: makeMetrics(segment),
       };
 
     case "diagram":
