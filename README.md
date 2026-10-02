@@ -346,3 +346,19 @@ Já existe:
 - áudio/narração;
 - integração direta com LLM;
 - render em lote.
+
+
+## Apresentador padrão
+
+Quando uma cena tiver humano principal, o padrão é **João Matheus**. O Director deve preservar óculos, cabelo curto escuro, barba grisalha e reconhecibilidade facial, adaptando apenas o tratamento ao designer.
+
+Contrato no projeto:
+
+```
+src/presenter/profile.ts
+src/presenter/designerPolicy.ts
+references/presenter-profile.json
+docs/PRESENTER_REFERENCE.md
+```
+
+As duas fotos originais e as dez referências visuais dos novos designers ficam empacotadas no plugin privado **Aulas Animadas do João**, para que o plugin use a mesma identidade visual do projeto.
