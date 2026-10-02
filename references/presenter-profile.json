@@ -1,0 +1,25 @@
+{
+  "id": "joao-matheus-presenter",
+  "displayName": "João Matheus",
+  "defaultHumanPresenter": true,
+  "referenceAssetsInPlugin": [
+    "assets/host/joao-reference-suit.png",
+    "assets/host/joao-reference-orange-polo.png"
+  ],
+  "identityAnchors": [
+    "dark glasses",
+    "short dark curly/wavy hair",
+    "short full beard with visible gray",
+    "adult male face consistent with the reference photos",
+    "friendly smile"
+  ],
+  "rules": {
+    "genericHumanReplacementAllowed": false,
+    "preserveGlassesByDefault": true,
+    "preserveGrayBeard": true,
+    "preserveRecognizability": true,
+    "allowStyleTransfer": true,
+    "allowWardrobeChange": true,
+    "allowSceneChange": true
+  }
+}
