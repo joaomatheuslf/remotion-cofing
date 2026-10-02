@@ -3,6 +3,7 @@ import {Composition} from "remotion";
 import {LessonComposition} from "./LessonComposition";
 import {exampleLesson} from "./lesson.example";
 import {engineDemoLesson} from "./engine/demoLesson";
+import {directorDemoLesson} from "./director/directorDemo";
 import {theme} from "./engine/theme";
 
 const frames = (seconds:number) => Math.round(seconds * 30);
@@ -28,6 +29,15 @@ export const Root: React.FC = () => (
       fps={30}
       durationInFrames={lessonDuration(engineDemoLesson.scenes)}
       defaultProps={{lesson: engineDemoLesson}}
+    />
+    <Composition
+      id="DirectorDemo"
+      component={LessonComposition}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={lessonDuration(directorDemoLesson.scenes)}
+      defaultProps={{lesson: directorDemoLesson}}
     />
   </>
 );
