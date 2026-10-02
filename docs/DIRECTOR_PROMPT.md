@@ -130,3 +130,28 @@ Use para nível, energia, qualidade, risco, progresso, confiança, carga ou recu
 > Qual representação visual torna esta ideia mais fácil de entender em 3–7 segundos?
 
 Essa pergunta deve orientar a escolha de template, pixel game ou metáfora.
+
+
+## Designer da aula
+
+Além de escolher template e metáfora, o Director pode selecionar uma identidade visual global:
+
+~~~json
+{
+  "designerId": "editorial-pop"
+}
+~~~
+
+Designers disponíveis:
+
+- pixel-night
+- editorial-pop
+- clean-tech
+
+Escolha pelo contexto da aula, não por preferência política ou estética arbitrária:
+
+- pixel-night: gamificado, informal, tecnologia e demonstrações;
+- editorial-pop: didático, social, comunicação e conteúdo de alto impacto visual;
+- clean-tech: institucional, corporativo e capacitação formal.
+
+O conteúdo e a estrutura das cenas devem continuar funcionando mesmo quando o designer mudar.
