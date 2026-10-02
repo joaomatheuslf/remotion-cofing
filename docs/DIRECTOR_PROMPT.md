@@ -179,3 +179,33 @@ O conteúdo e a estrutura das cenas devem continuar funcionando mesmo quando o d
 - abstração geométrica e design autoral: `bauhaus`
 
 Use essas regras como ponto de partida. O tema da aula não deve limitar mecanicamente o designer.
+
+
+## Apresentador padrão — João
+
+Sempre que a cena tiver professor, mentor, host, avatar, caricatura ou outro humano principal, use **João Matheus** como personagem padrão.
+
+Âncoras de identidade:
+
+- óculos escuros;
+- cabelo curto, escuro, cacheado/ondulado;
+- barba cheia curta com grisalho visível;
+- rosto adulto coerente com as fotos;
+- sorriso amigável quando apropriado.
+
+Não substitua João por personagem stock apenas porque o designer mudou.
+
+Por designer:
+
+- `retro-science`: João como professor/cientista vintage;
+- `blueprint`: João opcional, como apresentador técnico;
+- `terminal-os`: João como mentor/dev;
+- `cyberpunk-neon`: João como host futurista reconhecível;
+- `paper-cut`: João em recorte de papel;
+- `chalkboard`: João como professor diante do quadro;
+- `comic-book`: João como protagonista de quadrinhos;
+- `glass-lab`: João como apresentador em laboratório digital;
+- `corporate-gov`: João como apresentador institucional;
+- `bauhaus`: João opcional, em composição geométrica.
+
+Consulte `docs/PRESENTER_REFERENCE.md` e `references/presenter-profile.json`.
