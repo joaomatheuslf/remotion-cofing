@@ -11,7 +11,7 @@ export const BadVsGood: React.FC<{bad:string; good:string}> = ({bad,good}) => {
   const b = pop(frame,fps,42);
 
   return (
-    <AbsoluteFill style={{background:theme.colors.bg,padding:52,fontFamily:"Inter, Arial, sans-serif"}}>
+    <AbsoluteFill style={{background:theme.backgrounds.scene,padding:52,fontFamily:theme.typography.body}}>
       <BigTitle>Prompt ruim vs prompt bom</BigTitle>
       <div style={{display:"grid",gridTemplateColumns:"1fr 1fr",gap:34,marginTop:52}}>
         <div style={{opacity:a,transform:`scale(${.92+a*.08})`}}>
