@@ -21,11 +21,14 @@ const includesAny = (value:string, terms:string[]) =>
   terms.some((term) => value.toLowerCase().includes(term));
 
 export const selectTemplate = (segment:BlueprintSegment): SceneKind => {
-  // Casos especiais podem sobrescrever a intenção genérica.
   const searchable = [
     segment.title,
     ...(segment.content ?? []),
   ].join(" ").toLowerCase();
+
+  if (segment.intent === "simulate" && segment.visualStyle === "pixel-game") {
+    return "game-simulation";
+  }
 
   if (
     segment.intent === "decompose" &&
