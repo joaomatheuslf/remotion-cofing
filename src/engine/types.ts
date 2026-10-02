@@ -1,4 +1,5 @@
 import {DesignerId} from "../designers/types";
+import type {TimelineAction} from "../timeline/types";
 
 export type AnimationName =
   | "pop"
@@ -33,12 +34,7 @@ export type SceneKind =
   | "challenge"
   | "summary";
 
-export type SceneAction = {
-  at: number;
-  target: string;
-  animation: AnimationName;
-  duration?: number;
-};
+export type SceneAction = TimelineAction;
 
 export type Scene = {
   id: string;
