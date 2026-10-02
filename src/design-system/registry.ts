@@ -20,7 +20,7 @@ const transitionFor = (id:DesignerId) => {
 export const designSystems:DesignSystemRegistry = Object.fromEntries(
   Object.entries(designers).map(([id,designer])=>[
     id,
-    {id,designer,transitions:{default:transitionFor(id as DesignerId)},characterStyle:id} satisfies DesignSystemPack,
+    {id:id as DesignerId,designer,transitions:{default:transitionFor(id as DesignerId)},characterStyle:id} satisfies DesignSystemPack,
   ])
 ) as DesignSystemRegistry;
 
