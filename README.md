@@ -32,12 +32,13 @@ template / metáfora
        MP4
 ```
 
-A engine possui quatro camadas:
+A engine possui cinco camadas:
 
 1. **Director** — decide intenção pedagógica e representação visual.
 2. **Engine visual** — renderiza layouts e movimentos reutilizáveis.
 3. **Pixel Game Layer** — cria cenas gamificadas com personagem, robô e HUD.
 4. **Metaphor Library** — explica fluxo, capacidade, fila, montagem e escala com movimento.
+5. **Designer System** — troca identidade visual sem reescrever conteúdo ou templates.
 
 ## Rodar
 
@@ -54,6 +55,9 @@ npm run start
 - `OutlineDemo` — aula criada a partir de outline textual
 - `PixelGameDemo` — explainer gamificado em pixel art
 - `MetaphorDemo` — showcase das metáforas animadas
+- `DesignerPixelNight` — mesma aula em Pixel Night
+- `DesignerEditorialPop` — mesma aula em Editorial Pop
+- `DesignerCleanTech` — mesma aula em Clean Tech
 
 ## Render
 
@@ -64,6 +68,9 @@ npm run render:director
 npm run render:outline
 npm run render:pixel
 npm run render:metaphors
+npm run render:designer:pixel
+npm run render:designer:editorial
+npm run render:designer:clean
 ```
 
 ## Templates principais
@@ -131,6 +138,46 @@ docs/METAPHORS.md
   ]
 }
 ```
+
+
+## Designers
+
+A mesma aula pode trocar de identidade visual sem alterar as cenas:
+
+~~~ts
+{
+  id: "prompt-basico",
+  title: "Fundamentos de Prompt",
+  designerId: "editorial-pop",
+  scenes: [...]
+}
+~~~
+
+Designers atuais:
+
+- `pixel-night`
+- `editorial-pop`
+- `clean-tech`
+
+O sistema usa um `DesignerProvider` + CSS variables para que componentes antigos também herdem boa parte da identidade automaticamente.
+
+Arquivos:
+
+~~~
+src/designers/
+  types.ts
+  registry.ts
+  DesignerProvider.tsx
+  pixel-night.ts
+  editorial-pop.ts
+  clean-tech.ts
+~~~
+
+Guia para criar novos designers:
+
+~~~
+docs/DESIGNERS.md
+~~~
 
 ## Pixel game
 
@@ -220,6 +267,7 @@ src/
     SceneRenderer.tsx
     pixelDemo.ts
     metaphorDemo.ts
+    designerDemo.ts
 
   templates/
     GenericTemplates.tsx
@@ -227,6 +275,14 @@ src/
     BadVsGood.tsx
     GameSimulation.tsx
     MetaphorScenes.tsx
+
+  designers/
+    types.ts
+    registry.ts
+    DesignerProvider.tsx
+    pixel-night.ts
+    editorial-pop.ts
+    clean-tech.ts
 
   components/
     ui.tsx
@@ -238,6 +294,7 @@ docs/
   DIRECTOR_PROMPT.md
   SCRIPT_FORMAT.md
   METAPHORS.md
+  DESIGNERS.md
 ```
 
 ## Estado atual
@@ -253,6 +310,9 @@ Já existe:
 - schema Zod;
 - camada pixel game;
 - biblioteca de 5 metáforas animadas;
+- Designer Registry com 3 identidades visuais;
+- DesignerProvider baseado em tokens e CSS variables;
+- demos da mesma aula em três designers;
 - demos separadas no Remotion Studio;
 - CI com TypeScript.
 
@@ -262,6 +322,5 @@ Já existe:
 - sprites externos e biblioteca de assets;
 - legendas sincronizadas;
 - áudio/narração;
-- temas múltiplos;
 - integração direta com LLM;
 - render em lote.
