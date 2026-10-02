@@ -224,6 +224,7 @@ export const compileSegment = (segment:BlueprintSegment): Scene => {
 export const compileLesson = (blueprint:LessonBlueprint): Lesson => ({
   id: blueprint.id,
   title: blueprint.title,
+  designerId: blueprint.designerId,
   theme: "prompt-forge",
   scenes: blueprint.segments.map(compileSegment),
 });
