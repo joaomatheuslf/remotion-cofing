@@ -74,9 +74,9 @@ export const BigTitle: React.FC<React.PropsWithChildren> = ({children}) => {
       fontWeight:"var(--pf-title-weight, 900)",
       lineHeight:1,
       letterSpacing:designer.variants.title === "editorial" ? -3 : -2,
-      color:designer.variants.title === "minimal"
-        ? theme.colors.ink
-        : theme.colors.white,
+      color:designer.variants.title === "arcade"
+        ? theme.colors.white
+        : theme.colors.ink,
       textShadow:designer.variants.title === "minimal"
         ? "none"
         : "5px 5px 0 var(--pf-ink, #101419)"
