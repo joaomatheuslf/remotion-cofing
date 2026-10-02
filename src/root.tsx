@@ -5,6 +5,7 @@ import {exampleLesson} from "./lesson.example";
 import {engineDemoLesson} from "./engine/demoLesson";
 import {directorDemoLesson} from "./director/directorDemo";
 import {outlineDemoLesson} from "./director/outlineDemo";
+import {pixelDemoLesson} from "./engine/pixelDemo";
 import {theme} from "./engine/theme";
 
 const frames = (seconds:number) => Math.round(seconds * 30);
@@ -48,6 +49,15 @@ export const Root: React.FC = () => (
       fps={30}
       durationInFrames={lessonDuration(outlineDemoLesson.scenes)}
       defaultProps={{lesson: outlineDemoLesson}}
+    />
+    <Composition
+      id="PixelGameDemo"
+      component={LessonComposition}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={lessonDuration(pixelDemoLesson.scenes)}
+      defaultProps={{lesson: pixelDemoLesson}}
     />
   </>
 );
