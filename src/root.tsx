@@ -13,6 +13,7 @@ import {
   designerCleanTech,
 } from "./engine/designerDemo";
 import {theme} from "./engine/theme";
+import {DesignerGallery, designerGalleryDurationInFrames} from "./designers/DesignerGallery";
 
 const frames = (seconds:number) => Math.round(seconds * 30);
 const lessonDuration = (scenes:{duration:number}[]) =>
@@ -100,6 +101,14 @@ export const Root: React.FC = () => (
       fps={30}
       durationInFrames={lessonDuration(designerCleanTech.scenes)}
       defaultProps={{lesson: designerCleanTech}}
+    />
+    <Composition
+      id="DesignerGallery"
+      component={DesignerGallery}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={designerGalleryDurationInFrames}
     />
   </>
 );
