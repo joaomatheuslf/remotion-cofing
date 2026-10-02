@@ -58,6 +58,7 @@ npm run start
 - `DesignerPixelNight` — mesma aula em Pixel Night
 - `DesignerEditorialPop` — mesma aula em Editorial Pop
 - `DesignerCleanTech` — mesma aula em Clean Tech
+- `DesignerGallery` — galeria animada de todos os designers
 
 ## Render
 
@@ -71,6 +72,7 @@ npm run render:metaphors
 npm run render:designer:pixel
 npm run render:designer:editorial
 npm run render:designer:clean
+npm run render:designers
 ```
 
 ## Templates principais
@@ -158,6 +160,16 @@ Designers atuais:
 - `pixel-night`
 - `editorial-pop`
 - `clean-tech`
+- `retro-science`
+- `blueprint`
+- `terminal-os`
+- `cyberpunk-neon`
+- `paper-cut`
+- `chalkboard`
+- `comic-book`
+- `glass-lab`
+- `corporate-gov`
+- `bauhaus`
 
 O sistema usa um `DesignerProvider` + CSS variables para que componentes antigos também herdem boa parte da identidade automaticamente.
 
@@ -283,6 +295,16 @@ src/
     pixel-night.ts
     editorial-pop.ts
     clean-tech.ts
+    retro-science.ts
+    blueprint.ts
+    terminal-os.ts
+    cyberpunk-neon.ts
+    paper-cut.ts
+    chalkboard.ts
+    comic-book.ts
+    glass-lab.ts
+    corporate-gov.ts
+    bauhaus.ts
 
   components/
     ui.tsx
@@ -310,7 +332,7 @@ Já existe:
 - schema Zod;
 - camada pixel game;
 - biblioteca de 5 metáforas animadas;
-- Designer Registry com 3 identidades visuais;
+- Designer Registry com 13 identidades visuais;
 - DesignerProvider baseado em tokens e CSS variables;
 - demos da mesma aula em três designers;
 - demos separadas no Remotion Studio;
