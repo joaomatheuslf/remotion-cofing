@@ -1,4 +1,9 @@
-import {LessonBlueprint, TeachingIntent, VisualStyle} from "./types";
+import {
+  LessonBlueprint,
+  TeachingIntent,
+  VisualMetaphor,
+  VisualStyle,
+} from "./types";
 
 const intents: TeachingIntent[] = [
   "open","explain","decompose","compare","sequence","timeline",
@@ -7,11 +12,22 @@ const intents: TeachingIntent[] = [
 
 const styles: VisualStyle[] = ["default","pixel-game"];
 
+const metaphors: VisualMetaphor[] = [
+  "token-flow",
+  "prompt-builder",
+  "context-window",
+  "queue",
+  "counter-grid",
+];
+
 const isIntent = (value:string): value is TeachingIntent =>
   intents.includes(value as TeachingIntent);
 
 const isVisualStyle = (value:string): value is VisualStyle =>
   styles.includes(value as VisualStyle);
+
+const isMetaphor = (value:string): value is VisualMetaphor =>
+  metaphors.includes(value as VisualMetaphor);
 
 const slug = (value:string) =>
   value
@@ -31,8 +47,17 @@ type DraftSegment = {
   cta?:string;
   duration?:number;
   visualStyle?:VisualStyle;
+  metaphor?:VisualMetaphor;
   dialogue?:string;
   characterState?:"idle"|"thinking"|"happy"|"warning";
+  input?:string;
+  output?:string;
+  tokens?:string[];
+  value?:number;
+  unit?:string;
+  capacity?:number;
+  processor?:string;
+  center?:string;
 };
 
 const headingPattern = /^##\s*\[([a-z-]+)\]\s*(.+)$/i;
@@ -75,7 +100,7 @@ export const parseOutline = (
     if(!current) continue;
 
     const metadata = line.match(
-      /^(subtitle|kicker|cta|duration|style|dialogue|character):\s*(.+)$/i
+      /^(subtitle|kicker|cta|duration|style|metaphor|dialogue|character|input|output|tokens|value|unit|capacity|processor|center):\s*(.+)$/i
     );
 
     if(metadata){
@@ -90,12 +115,38 @@ export const parseOutline = (
           throw new Error(`Visual style desconhecido: ${value}`);
         }
         current.visualStyle = value;
+      } else if(key === "metaphor"){
+        if(!isMetaphor(value)){
+          throw new Error(`Metáfora desconhecida: ${value}`);
+        }
+        current.metaphor = value;
       } else if(key === "character"){
         if(["idle","thinking","happy","warning"].includes(value)){
           current.characterState = value as DraftSegment["characterState"];
         }
+      } else if(key === "tokens"){
+        current.tokens = value
+          .split("|")
+          .map((token) => token.trim())
+          .filter(Boolean);
+      } else if(key === "value"){
+        const numberValue=Number(value);
+        if(Number.isFinite(numberValue)) current.value=numberValue;
+      } else if(key === "capacity"){
+        const capacity=Number(value);
+        if(Number.isFinite(capacity) && capacity > 0) current.capacity=capacity;
       } else if(key === "dialogue"){
         current.dialogue = value;
+      } else if(key === "input"){
+        current.input = value;
+      } else if(key === "output"){
+        current.output = value;
+      } else if(key === "unit"){
+        current.unit = value;
+      } else if(key === "processor"){
+        current.processor = value;
+      } else if(key === "center"){
+        current.center = value;
       } else {
         (current as Record<string, unknown>)[key] = value;
       }
@@ -139,8 +190,17 @@ export const parseOutline = (
         cta:draft.cta,
         duration:draft.duration,
         visualStyle:draft.visualStyle,
+        metaphor:draft.metaphor,
         dialogue:draft.dialogue,
         characterState:draft.characterState,
+        input:draft.input,
+        output:draft.output,
+        tokens:draft.tokens,
+        value:draft.value,
+        unit:draft.unit,
+        capacity:draft.capacity,
+        processor:draft.processor,
+        center:draft.center,
       };
     }),
   };
