@@ -42,18 +42,18 @@ npm install
 npm run start
 ```
 
-No Remotion Studio existem três composições:
+No Remotion Studio existem quatro composições:
 
 - `PromptForgeSlide` — exemplo básico;
 - `EngineShowcase` — showcase dos templates;
-- `DirectorDemo` — uma aula montada automaticamente pelo Director.
+- `DirectorDemo` — uma aula montada automaticamente pelo Director.\n- `OutlineDemo` — uma aula criada a partir de um roteiro textual simples.
 
 ## Render
 
 ```bash
 npm run render
 npm run render:showcase
-npm run render:director
+npm run render:director\nnpm run render:outline
 ```
 
 ## Templates implementados
@@ -137,7 +137,7 @@ import {compileLesson} from "./director/compileLesson";
 const lesson = compileLesson(blueprint);
 ```
 
-## Validação
+## Roteiro textual rápido\n\nAlém de Blueprint em TypeScript/JSON, o motor agora possui `parseOutline()`. Ele converte um roteiro marcado como `## [intent] Título` em Blueprint.\n\nDocumentação e prompt para o LLM:\n\n```\ndocs/SCRIPT_FORMAT.md\ndocs/DIRECTOR_PROMPT.md\n```\n\nIsso permite o fluxo:\n\n```\ntranscrição\n  -> LLM Director\n  -> outline/JSON\n  -> parser + compiler\n  -> engine visual\n```\n\n## Validação
 
 A engine já possui schema Zod:
 
@@ -158,7 +158,7 @@ src/
     selectTemplate.ts
     compileLesson.ts
     promptLessonBlueprint.ts
-    directorDemo.ts
+    directorDemo.ts\n    parseOutline.ts\n    outlineDemo.ts
 
   engine/
     types.ts
@@ -180,7 +180,7 @@ src/
   root.tsx
 
 docs/
-  lesson-blueprint.example.json
+  lesson-blueprint.example.json\n  DIRECTOR_PROMPT.md\n  SCRIPT_FORMAT.md
 ```
 
 ## Objetivo do projeto
