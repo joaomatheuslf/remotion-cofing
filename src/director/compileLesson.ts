@@ -17,6 +17,12 @@ const defaultDuration = (kind:Scene["kind"]) => {
     case "simulation":
     case "game-simulation":
       return 6;
+    case "token-flow":
+    case "prompt-builder":
+    case "context-window":
+    case "queue":
+    case "counter-grid":
+      return 7;
     default: return 5;
   }
 };
@@ -45,6 +51,24 @@ const makeMetrics = (segment:BlueprintSegment) => {
     value: Math.min(100, 55 + i * 12),
     color: palette[i % palette.length],
   }));
+};
+
+const tokenFlowData = (segment:BlueprintSegment) => {
+  const content = segment.content ?? [];
+  const inferredInput = segment.input ?? content[0] ?? "Entrada";
+  const inferredOutput =
+    segment.output ??
+    (content.length > 1 ? content[content.length - 1] : "Saída");
+  const inferredTokens =
+    segment.tokens ??
+    content.slice(1, Math.max(1, content.length - 1));
+
+  return {
+    input: inferredInput,
+    tokens: inferredTokens.length > 0 ? inferredTokens : ["token 1","token 2","token 3"],
+    output: inferredOutput,
+    modelLabel: segment.center ?? "MODELO IA",
+  };
 };
 
 const dataFor = (segment:BlueprintSegment, kind:Scene["kind"]) => {
@@ -112,6 +136,37 @@ const dataFor = (segment:BlueprintSegment, kind:Scene["kind"]) => {
           "Observe como o estado muda enquanto a explicação avança.",
         characterState: segment.characterState ?? "thinking",
         metrics: makeMetrics(segment),
+      };
+
+    case "token-flow":
+      return tokenFlowData(segment);
+
+    case "prompt-builder":
+      return {
+        parts: content,
+        result: segment.output ?? "ESTRUTURA COMPLETA",
+      };
+
+    case "context-window":
+      return {
+        items: content,
+        capacity: segment.capacity ?? 8,
+        label: segment.center ?? "JANELA DE CONTEXTO",
+      };
+
+    case "queue":
+      return {
+        items: content,
+        processor: segment.processor ?? segment.center ?? "PROCESSADOR",
+        outputLabel: segment.output ?? "CONCLUÍDO",
+      };
+
+    case "counter-grid":
+      return {
+        value: segment.value ?? 100,
+        label: content[0] ?? segment.title,
+        unit: segment.unit ?? "",
+        cells: 60,
       };
 
     case "diagram":
