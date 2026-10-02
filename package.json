@@ -1,6 +1,6 @@
 {
   "name": "remotion-cofing",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "description": "Prompt Forge — engine de aulas animadas em Remotion",
   "scripts": {
@@ -8,13 +8,15 @@
     "render": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4",
     "check": "tsc --noEmit",
     "render:showcase": "remotion render EngineShowcase out/engine-showcase.mp4",
-    "render:slide": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4"
+    "render:slide": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4",
+    "render:director": "remotion render DirectorDemo out/director-demo.mp4"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "remotion": "4.0.530"
+    "remotion": "4.0.530",
+    "zod": "^4.1.11"
   },
   "devDependencies": {
     "@types/react": "^19.1.16",
