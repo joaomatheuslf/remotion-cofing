@@ -1,5 +1,7 @@
 import React from "react";
 import {Scene} from "./types";
+import {useDesigner} from "../designers/DesignerProvider";
+import {getDesignerSceneOverride} from "../designers/sceneOverrides";
 import {PromptAnatomy} from "../templates/PromptAnatomy";
 import {BadVsGood} from "../templates/BadVsGood";
 import {GameSimulationScene} from "../templates/GameSimulation";
@@ -27,6 +29,12 @@ import {
 
 export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
   const data = scene.data ?? {};
+  const designer=useDesigner();
+  const DesignerOverride=getDesignerSceneOverride(designer.id,scene.kind);
+
+  if(DesignerOverride){
+    return <DesignerOverride scene={scene}/>;
+  }
 
   switch(scene.kind){
     case "title":
