@@ -7,6 +7,11 @@ import {directorDemoLesson} from "./director/directorDemo";
 import {outlineDemoLesson} from "./director/outlineDemo";
 import {pixelDemoLesson} from "./engine/pixelDemo";
 import {metaphorDemoLesson} from "./engine/metaphorDemo";
+import {
+  designerPixelNight,
+  designerEditorialPop,
+  designerCleanTech,
+} from "./engine/designerDemo";
 import {theme} from "./engine/theme";
 
 const frames = (seconds:number) => Math.round(seconds * 30);
@@ -68,6 +73,33 @@ export const Root: React.FC = () => (
       fps={30}
       durationInFrames={lessonDuration(metaphorDemoLesson.scenes)}
       defaultProps={{lesson: metaphorDemoLesson}}
+    />
+    <Composition
+      id="DesignerPixelNight"
+      component={LessonComposition}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={lessonDuration(designerPixelNight.scenes)}
+      defaultProps={{lesson: designerPixelNight}}
+    />
+    <Composition
+      id="DesignerEditorialPop"
+      component={LessonComposition}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={lessonDuration(designerEditorialPop.scenes)}
+      defaultProps={{lesson: designerEditorialPop}}
+    />
+    <Composition
+      id="DesignerCleanTech"
+      component={LessonComposition}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={lessonDuration(designerCleanTech.scenes)}
+      defaultProps={{lesson: designerCleanTech}}
     />
   </>
 );
