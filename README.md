@@ -362,3 +362,47 @@ docs/PRESENTER_REFERENCE.md
 ```
 
 As duas fotos originais e as dez referências visuais dos novos designers ficam empacotadas no plugin privado **Aulas Animadas do João**, para que o plugin use a mesma identidade visual do projeto.
+
+
+## Arquitetura 0.6
+
+Foram adicionadas as melhorias selecionadas 1, 2, 4, 5, 6, 7, 8, 9, 11 e 12:
+
+- Design System Packs em `src/design-system/`;
+- Character Engine do João em `src/characters/`;
+- timeline por ações em `src/timeline/`;
+- sincronização de narração em `src/narration/`;
+- registry com 30 metáforas em `src/metaphors/`;
+- variantes de templates em `src/templates/variants.ts`;
+- transições específicas por designer em `src/transitions/`;
+- Asset Resolver em `src/assets/`;
+- storyboard automático em `src/storyboard/`;
+- Designer SDK em `scripts/create-designer.mjs`.
+
+### Storyboard
+
+No Studio:
+
+```
+StoryboardDemo
+```
+
+Render:
+
+```bash
+npm run render:storyboard
+```
+
+### Criar designer
+
+```bash
+npm run designer:new -- retro-future
+```
+
+Detalhes em:
+
+```
+docs/ROADMAP_SELECTED_1_2_4_5_6_7_8_9_11_12.md
+```
+
+Observação: o registry possui 30 metáforas semânticas; neste momento, 5 já têm renderer completo. As demais estão registradas para implementação incremental, sem fingir que já renderizam.
