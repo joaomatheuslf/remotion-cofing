@@ -10,6 +10,7 @@ export const SceneKindSchema = z.enum([
   "timeline",
   "before-after",
   "simulation",
+  "game-simulation",
   "diagram",
   "error",
   "quiz",
