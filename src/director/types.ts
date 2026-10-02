@@ -13,6 +13,8 @@ export type TeachingIntent =
   | "practice"
   | "recap";
 
+export type VisualStyle = "default" | "pixel-game";
+
 export type ComparisonColumn = {
   label: string;
   items: string[];
@@ -36,11 +38,10 @@ export type BlueprintSegment = {
   title: string;
   intent: TeachingIntent;
   duration?: number;
+  visualStyle?: VisualStyle;
 
-  // Conteúdo simples. O diretor converte isto em dados do template.
   content?: string[];
 
-  // Campos opcionais para cenas que exigem estrutura específica.
   subtitle?: string;
   kicker?: string;
   left?: ComparisonColumn;
@@ -49,6 +50,10 @@ export type BlueprintSegment = {
   metrics?: MetricSpec[];
   quiz?: QuizSpec;
   cta?: string;
+
+  // Opcional para cenas gamificadas.
+  dialogue?: string;
+  characterState?: "idle" | "thinking" | "happy" | "warning";
 };
 
 export type LessonBlueprint = {
