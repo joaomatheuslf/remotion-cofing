@@ -19,6 +19,7 @@ export type SceneKind =
   | "timeline"
   | "before-after"
   | "simulation"
+  | "game-simulation"
   | "diagram"
   | "error"
   | "quiz"
@@ -26,7 +27,7 @@ export type SceneKind =
   | "summary";
 
 export type SceneAction = {
-  at: number; // segundos
+  at: number;
   target: string;
   animation: AnimationName;
   duration?: number;
