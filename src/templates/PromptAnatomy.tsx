@@ -15,9 +15,9 @@ export const PromptAnatomy: React.FC<{title?:string; parts:Part[]}> = ({
 
   return (
     <AbsoluteFill style={{
-      background:theme.colors.bg,
+      background:theme.backgrounds.scene,
       padding:52,
-      fontFamily:"Inter, Arial, sans-serif",
+      fontFamily:theme.typography.body,
       overflow:"hidden"
     }}>
       <BigTitle>{title}</BigTitle>
