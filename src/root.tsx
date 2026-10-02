@@ -14,6 +14,7 @@ import {
 } from "./engine/designerDemo";
 import {theme} from "./engine/theme";
 import {DesignerGallery, designerGalleryDurationInFrames} from "./designers/DesignerGallery";
+import {StoryboardSheet} from "./storyboard/StoryboardSheet";
 
 const frames = (seconds:number) => Math.round(seconds * 30);
 const lessonDuration = (scenes:{duration:number}[]) =>
@@ -109,6 +110,15 @@ export const Root: React.FC = () => (
       height={theme.canvas.height}
       fps={30}
       durationInFrames={designerGalleryDurationInFrames}
+    />
+    <Composition
+      id="StoryboardDemo"
+      component={StoryboardSheet}
+      width={theme.canvas.width}
+      height={theme.canvas.height}
+      fps={30}
+      durationInFrames={180}
+      defaultProps={{lesson: directorDemoLesson}}
     />
   </>
 );
