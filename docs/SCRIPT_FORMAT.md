@@ -43,3 +43,25 @@ Metadados suportados:
 - `duration:`
 
 O parser está em `src/director/parseOutline.ts`.
+
+
+## Cena gamificada em pixel art
+
+Use uma cena `simulate` com `style: pixel-game`.
+
+```md
+## [simulate] Qualidade do prompt
+style: pixel-game
+dialogue: Quanto mais claro o comando, menos a IA precisa adivinhar.
+character: thinking
+- Clareza
+- Contexto
+- Formato
+- Precisão
+```
+
+Metadados adicionais:
+
+- `style: pixel-game`
+- `dialogue:`
+- `character: idle | thinking | happy | warning`
