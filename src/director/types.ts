@@ -15,6 +15,13 @@ export type TeachingIntent =
 
 export type VisualStyle = "default" | "pixel-game";
 
+export type VisualMetaphor =
+  | "token-flow"
+  | "prompt-builder"
+  | "context-window"
+  | "queue"
+  | "counter-grid";
+
 export type ComparisonColumn = {
   label: string;
   items: string[];
@@ -38,7 +45,9 @@ export type BlueprintSegment = {
   title: string;
   intent: TeachingIntent;
   duration?: number;
+
   visualStyle?: VisualStyle;
+  metaphor?: VisualMetaphor;
 
   content?: string[];
 
@@ -51,9 +60,18 @@ export type BlueprintSegment = {
   quiz?: QuizSpec;
   cta?: string;
 
-  // Opcional para cenas gamificadas.
+  // Cenas gamificadas.
   dialogue?: string;
   characterState?: "idle" | "thinking" | "happy" | "warning";
+
+  // Metáforas visuais.
+  input?: string;
+  output?: string;
+  tokens?: string[];
+  value?: number;
+  unit?: string;
+  capacity?: number;
+  processor?: string;
 };
 
 export type LessonBlueprint = {
