@@ -97,3 +97,19 @@ A pergunta para cada trecho é:
 > Qual representação visual tornaria esta ideia mais fácil de entender em 3–7 segundos?
 
 A intenção escolhida deve responder a essa pergunta.
+
+
+## Linguagem visual gamificada
+
+Quando o trecho puder ser melhor entendido como um **estado que muda** — por exemplo energia, progresso, qualidade, risco, confiança, carga, nível ou recurso — o Director pode usar:
+
+```json
+{
+  "intent": "simulate",
+  "visualStyle": "pixel-game"
+}
+```
+
+Essa combinação seleciona o template `game-simulation`, com personagem, robô, HUD e barras de estado.
+
+Use com moderação. Ele deve funcionar como metáfora explicativa, não apenas decoração.
