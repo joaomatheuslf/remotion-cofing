@@ -75,3 +75,33 @@ designer: pixel-night | editorial-pop | clean-tech
 ~~~
 
 Componentes novos devem preferir esses tokens em vez de hexadecimais fixos.
+
+
+## Quando tokens não são suficientes
+
+Um designer pode substituir uma cena específica sem alterar o core.
+
+Use:
+
+~~~
+src/designers/sceneOverrides.tsx
+~~~
+
+Isso permite, por exemplo:
+
+- Pixel Night usar uma versão gamificada de `timeline`;
+- Editorial Pop usar uma capa completamente diferente;
+- Clean Tech usar um diagrama institucional próprio;
+- um designer 3D substituir apenas `token-flow` por uma cena Three.js.
+
+A ordem de resolução é:
+
+~~~
+Designer scene override
+        ↓
+template padrão da engine
+~~~
+
+Se não existir override, a engine usa o template normal com os tokens do designer.
+
+Isso evita forks do motor e deixa novos designers realmente expansíveis.
