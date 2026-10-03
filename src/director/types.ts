@@ -1,4 +1,4 @@
-import type {PixelSceneSpec} from "../pixel/types";
+import type {PixelSceneSpec,AuthoredSceneSpec} from "../pixel/types";
 import {DesignerId} from "../designers/types";
 
 export type TeachingIntent =
@@ -50,6 +50,7 @@ export type BlueprintSegment = {
   duration?: number;
   visualStyle?: VisualStyle;
   pixel?: PixelSceneSpec;
+  sceneGraph?:AuthoredSceneSpec;
   metaphor?: VisualMetaphor;
   content?: string[];
   subtitle?: string;
@@ -72,6 +73,7 @@ export type BlueprintSegment = {
 };
 
 export type LessonBlueprint = {
+  mode?:"production"|"demo";
   id: string;
   title: string;
   designerId?: DesignerId;

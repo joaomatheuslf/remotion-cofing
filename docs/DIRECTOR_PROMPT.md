@@ -96,6 +96,7 @@ Use para nível, energia, qualidade, risco, progresso, confiança, carga ou recu
 {
   "id": "prompt-basico",
   "designerId": "clean-tech",
+  "mode": "demo",
   "title": "Fundamentos de Prompt",
   "segments": [
     {
@@ -140,7 +141,8 @@ Além de escolher template e metáfora, o Director pode selecionar uma identidad
 
 ~~~json
 {
-  "designerId": "editorial-pop"
+  "designerId": "editorial-pop",
+  "mode": "demo"
 }
 ~~~
 
@@ -233,3 +235,12 @@ movimento didático. Não converta uma página inteira em faixas ou faça zoom n
 O exemplo antigo de Blueprint acima é para um designer geral. Para Pixel Night,
 consulte a aula executável `public/lessons/pixel-night/lesson.json`; transforme cada
 `data.pixelScene` em `segment.pixel` quando usar o compilador.
+
+## Produção em qualquer designer (0.8)
+
+Em aulas finais, use `segment.sceneGraph` em todos os estilos. Declare `artDirection`
+e produza os objetos separadamente. Se houver João, declare suas referências e
+tratamento e anexe as fotos reais à ferramenta de imagem. Leia
+`docs/AUTHORED_PRODUCTION.md`, `docs/ASSET_GENERATION.md` e
+`public/references/joao/profile.json`. Exemplos genéricos deste documento são demos
+do SDK: `mode: "demo"` não é uma saída para a produção.

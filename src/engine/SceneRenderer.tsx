@@ -28,10 +28,10 @@ import {
   TitleScene,
 } from "../templates/GenericTemplates";
 
-export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
+export const SceneRenderer: React.FC<{scene:Scene;demo?:boolean}> = ({scene,demo=false}) => {
   const data = scene.data ?? {};
   const designer=useDesigner();
-  if(designer.id==="pixel-night") return <PixelScene scene={scene}/>;
+  if(!demo||designer.id==="pixel-night") return <PixelScene scene={scene}/>;
   const DesignerOverride=getDesignerSceneOverride(designer.id,scene.kind);
 
   if(DesignerOverride){

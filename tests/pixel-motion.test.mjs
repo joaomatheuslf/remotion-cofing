@@ -43,9 +43,9 @@ test('an animation that leaves the canvas fails the same gate used before render
 test('the real Director compiler refuses a generic default and preserves an authored pixel plan',async()=>{
  const {compileLesson}=await import('../src/director/compileLesson.ts');
  const base={id:'test',title:'Test',segments:[{id:'network',intent:'map',title:'Rede',duration:5,content:['Entrada','Saída']}]};
- assert.throws(()=>compileLesson(base),/requires data.pixelScene/);
+ assert.throws(()=>compileLesson(base),/requires data.sceneGraph/);
  const spec=clone();for(const e of spec.elements)if(e.motion)e.motion.end=5;
  const compiled=compileLesson({...base,segments:[{...base.segments[0],pixel:spec}]});
  assert.equal(compiled.designerId,'pixel-night');assert.deepEqual(compiled.scenes[0].data.pixelScene,spec);
- assert.equal(compileLesson({...base,designerId:'clean-tech'}).designerId,'clean-tech');
+ assert.equal(compileLesson({...base,designerId:'clean-tech',mode:'demo'}).designerId,'clean-tech');
 });

@@ -44,6 +44,7 @@ const makeLesson = (
   designerId: Lesson["designerId"],
   id: string
 ): Lesson => ({
+  mode:"demo",
   id,
   title: "Designer Demo",
   designerId,

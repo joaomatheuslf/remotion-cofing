@@ -11,8 +11,8 @@ export const joaoCharacter:CharacterProfile = {
     "formato geral do rosto consistente com as referências",
   ],
   referenceAssets:[
-    "plugin://assets/host/joao-reference-suit.png",
-    "plugin://assets/host/joao-reference-orange-polo.png",
+    "references/joao/joao-reference-suit.png",
+    "references/joao/joao-reference-orange-polo.png",
   ],
   poses:[
     {state:"idle",description:"postura neutra, olhando para a câmera"},

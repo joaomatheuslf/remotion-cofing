@@ -48,5 +48,5 @@ cta: FORJAR PROMPT
 `;
 
 export const outlineDemoLesson = compileLesson(
-  parseOutline(outline, "Prompt Forge — Outline Demo", "outline-demo")
+  {...parseOutline(outline, "Prompt Forge — Outline Demo", "outline-demo"),mode:"demo"}
 );

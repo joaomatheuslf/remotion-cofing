@@ -13,6 +13,7 @@ registerHooks({
   }
  },
  load(url,context,next){
+  if(url.endsWith('.json')&&url.startsWith('file:'))return {format:'module',shortCircuit:true,source:'export default '+readFileSync(fileURLToPath(url),'utf8')};
   if(/\.tsx?$/.test(url))return {format:'module',shortCircuit:true,source:ts.transpileModule(readFileSync(fileURLToPath(url),'utf8'),{compilerOptions:{module:ts.ModuleKind.ESNext,target:ts.ScriptTarget.ES2022,jsx:ts.JsxEmit.ReactJSX}}).outputText};
   return next(url,context);
  }

@@ -1,4 +1,5 @@
-/** Pixel Night production contract. Coordinates are in a 1080 × 864 canvas. */
+import type {DesignerId} from '../designers/types';
+/** Authored production contract. Coordinates are in a 1080 × 864 canvas. */
 export type PixelMotion = {
   type: 'float' | 'sway' | 'pulse' | 'signal' | 'fill' | 'gesture' | 'reveal' | 'dissolve';
   purpose: 'ambient' | 'teaching';
@@ -27,12 +28,17 @@ export type PixelElement = {
   points?: Array<{x:number;y:number}>;
   pivot?: {x:number;y:number};
   motion?: PixelMotion;
+  radius?:number;
 };
-export type PixelSceneSpec = {
+export type AuthoredSceneSpec = {
   version: 1;
-  designer: 'pixel-night';
+  designer: DesignerId;
+  artDirection?:{description:string;referenceAssets:string[]};
+  presenter?:{characterId:'joao-matheus';referenceIds:Array<'joao-suit'|'joao-orange-polo'>;treatment:string};
   canvas: {width:1080;height:864;fps:30};
   teachingGoal: string;
   background: {color:string;asset?:string};
   elements: PixelElement[];
 };
+
+export type PixelSceneSpec = AuthoredSceneSpec & {designer:'pixel-night'};

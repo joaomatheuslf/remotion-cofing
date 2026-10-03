@@ -3,6 +3,7 @@ import {Lesson} from "./types";
 export const metaphorDemoLesson: Lesson = {
   id:"metaphor-showcase",
   designerId: "clean-tech",
+  mode:"demo",
   title:"Metaphor Library",
   theme:"prompt-forge",
   scenes:[

@@ -1,18 +1,22 @@
 """Build the HTML player from the same native Pixel Night scene graph as Remotion."""
 from pathlib import Path
-import base64,json,shutil,subprocess
+import base64,json,shutil,subprocess,sys,html
 root=Path(__file__).resolve().parents[1]
-lesson=json.loads((root/'public/lessons/pixel-night/lesson.json').read_text())
+lesson_path=Path(sys.argv[1]).resolve() if len(sys.argv)>1 else root/'public/lessons/pixel-night/lesson.json'
+lesson=json.loads(lesson_path.read_text())
+for scene in lesson['scenes']:
+ scene['data']['pixelScene']=scene['data'].get('sceneGraph',scene['data'].get('pixelScene'))
+subprocess.run(['node','scripts/check-pixel.mjs',str(lesson_path)],cwd=root,check=True)
 used={s['data']['pixelScene']['background']['asset'] for s in lesson['scenes'] if s['data']['pixelScene']['background'].get('asset')}
 used|={e['asset'] for s in lesson['scenes'] for e in s['data']['pixelScene']['elements'] if e.get('asset')}
 shared='\n'.join((root/f'src/pixel/{name}.mjs').read_text().replace('export function','function') for name in ['motion','text','svg'])
 shared='\n'.join(line for line in shared.splitlines() if not line.startswith('import '))
 source=(root/'entrega-native/html-template.html').read_text()
 # Render first scene with the identical shared renderer, for script-disabled viewers.
-subprocess.run(['node','scripts/pixel-preview.mjs'],cwd=root,check=True)
+subprocess.run(['node','scripts/pixel-preview.mjs',str(lesson_path)],cwd=root,check=True)
 preview=(root/'out/pixel-qa/scene-01-2.0.svg').read_text()
 def build(assets,fallback):
- return source.replace('__SHARED_SOURCE__',shared).replace('__LESSON__',json.dumps(lesson,ensure_ascii=False)).replace('__ASSETS__',json.dumps(assets)).replace('__FALLBACK_SVG__',fallback)
+ return source.replace('__LESSON_TITLE__',html.escape(lesson['title'])).replace('__SHARED_SOURCE__',shared).replace('__LESSON__',json.dumps(lesson,ensure_ascii=False)).replace('__ASSETS__',json.dumps(assets)).replace('__FALLBACK_SVG__',fallback)
 inline={name:'data:image/png;base64,'+base64.b64encode((root/'public'/name).read_bytes()).decode() for name in sorted(used)}
 (root/'entrega-native/Aula_IA_Pixel_Night_Interativa.html').write_text(build(inline,preview))
 project=root/'entrega-native/html-player'

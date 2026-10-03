@@ -21,7 +21,7 @@ export const StoryboardSheet:React.FC<{lesson:Lesson}> = ({lesson}) => {
             }}>
               <div style={{position:"absolute",left:0,top:0,width:1080,height:864,transform:"scale(.282)",transformOrigin:"top left"}}>
                 <Freeze frame={Math.min(90,Math.max(12,Math.round(scene.duration*15)))}>
-                  <SceneRenderer scene={scene}/>
+                  <SceneRenderer scene={scene} demo={lesson.mode==="demo"}/>
                 </Freeze>
               </div>
               <div style={{

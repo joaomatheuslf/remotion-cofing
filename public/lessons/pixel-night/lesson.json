@@ -17,6 +17,14 @@
             "height": 864,
             "fps": 30
           },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-suit",
+              "joao-orange-polo"
+            ],
+            "treatment": "Pixel art com óculos, cabelo curto escuro e barba grisalha reconhecíveis."
+          },
           "teachingGoal": "O GUARDA-CHUVA DA IA — compreender pela representação e pelo movimento.",
           "background": {
             "color": "#04132b",
@@ -14810,6 +14818,14 @@
             "width": 1080,
             "height": 864,
             "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-suit",
+              "joao-orange-polo"
+            ],
+            "treatment": "Pixel art com óculos, cabelo curto escuro e barba grisalha reconhecíveis."
           },
           "teachingGoal": "MAPA DESBLOQUEADO — compreender pela representação e pelo movimento.",
           "background": {

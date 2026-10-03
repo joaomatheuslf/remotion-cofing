@@ -135,7 +135,7 @@ for n,(duration,title) in enumerate(zip(DUR,TITLES),1):
    line('diffusion-arrow',[(350,470),(400,470)]);line('diffusion-arrow-2',[(674,470),(724,470)]);signal('refine-signal',[(350,470),(725,470)],period=3);caption('Do ruído até a imagem, em vários passos.')
   else:
    rect('diffusion-panel',680,300,330,360,C[0]);house('clean',706,375,280,245);noise('noise',694,315,300,330,duration-1)
- scenes.append(dict(id=f'pixel-{n:02}',kind='diagram',title=title,duration=duration,data=dict(pixelScene=dict(version=1,designer='pixel-night',canvas=dict(width=1080,height=864,fps=30),teachingGoal=title+' — compreender pela representação e pelo movimento.',background=dict(color=INK,asset='lessons/pixel-18-layers/night-background.png'),elements=elements))))
+ scenes.append(dict(id=f'pixel-{n:02}',kind='diagram',title=title,duration=duration,data=dict(pixelScene=dict(version=1,designer='pixel-night',canvas=dict(width=1080,height=864,fps=30),**(dict(presenter=dict(characterId='joao-matheus',referenceIds=['joao-suit','joao-orange-polo'],treatment='Pixel art com óculos, cabelo curto escuro e barba grisalha reconhecíveis.')) if n in (1,17) else {}),teachingGoal=title+' — compreender pela representação e pelo movimento.',background=dict(color=INK,asset='lessons/pixel-18-layers/night-background.png'),elements=elements))))
 lesson=dict(id='pixel-night-ia-motion',title='O guarda-chuva da IA — Pixel Night com elementos separados',designerId='pixel-night',scenes=scenes)
 out=ROOT/'public/lessons/pixel-night/lesson.json';out.write_text(json.dumps(lesson,ensure_ascii=False,indent=2)+'\n')
 print(f'{len(scenes)} cenas, {sum(len(s["data"]["pixelScene"]["elements"]) for s in scenes)} elementos independentes: {out}')

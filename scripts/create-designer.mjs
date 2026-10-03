@@ -32,3 +32,5 @@ const lines=[
 fs.writeFileSync(file,lines.join("\n"));
 console.log("Criado:",file);
 console.log("Registre o novo ID em src/designers/types.ts e src/designers/registry.ts");
+
+console.log("Produção exige também registro em src/pixel/schema.mjs e direção/referências em public/references/joao/profile.json. Leia docs/AUTHORED_PRODUCTION.md e docs/ASSET_GENERATION.md.");

@@ -1,6 +1,6 @@
 {
   "name": "remotion-cofing",
-  "version": "0.7.0",
+  "version": "0.8.0",
   "private": true,
   "description": "Prompt Forge \u2014 engine de aulas animadas em Remotion",
   "scripts": {
@@ -29,7 +29,11 @@
     "prerender:pixel:lesson": "npm run pixel:validate",
     "prerender:designer:pixel": "npm run pixel:validate",
     "prerender:pixel": "npm run pixel:validate",
-    "prerender": "npm run pixel:validate"
+    "prerender": "npm run pixel:validate",
+    "test:production": "node --import ./tests/register-typescript.mjs --test tests/*test.mjs",
+    "production:validate": "node scripts/check-pixel.mjs",
+    "asset:request": "node scripts/prepare-image-request.mjs",
+    "references:import": "node scripts/import-private-references.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",

@@ -19,6 +19,6 @@ jobs:
           node-version: 22
       - run: npm ci
       - run: npm run check
-      - run: npm run test:pixel
-      - run: npm run pixel:validate
+      - run: npm run test:production
+      - run: npm run production:validate
       - run: npm run pixel:html

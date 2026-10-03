@@ -46,6 +46,7 @@ export type Scene = {
 };
 
 export type Lesson = {
+  mode?:"production"|"demo";
   id: string;
   title: string;
   designerId?: DesignerId;

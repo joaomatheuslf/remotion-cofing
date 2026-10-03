@@ -165,3 +165,10 @@ Os designers `blueprint` e `bauhaus` podem funcionar sem personagem. Nos demais,
 
 Não é apenas um tema aplicado aos templates genéricos. Requer o grafo de elementos
 e movimentos de [PIXEL_NIGHT_PRODUCTION.md](PIXEL_NIGHT_PRODUCTION.md).
+
+## Produção por elementos em todos os 13 estilos
+
+Todos exigem `sceneGraph`, ação didática e arte própria ao estilo. Demos de tokens
+não são aulas finais. Consulte `AUTHORED_PRODUCTION.md` e `ASSET_GENERATION.md`.
+O perfil e as fotos autorizadas estão em `public/references/joao/`; não use personagem
+genérico ao mudar de designer.

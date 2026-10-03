@@ -1,12 +1,13 @@
-import {readFileSync} from 'node:fs';
+import {readFileSync,existsSync} from 'node:fs';
 import path from 'node:path';
 import {pathToFileURL} from 'node:url';
-import {validatePixelLesson} from '../src/pixel/schema.mjs';
+import {validateProductionLesson} from '../src/pixel/schema.mjs';
 import {evaluateMotion} from '../src/pixel/motion.mjs';
 import {wrapText,textMetrics,pixelGlyphs} from '../src/pixel/text.mjs';
 import {pngMetrics} from './pixel-assets.mjs';
 export function checkPixelLesson(lesson,publicRoot='public'){
- validatePixelLesson(lesson);let assets=new Map(),motions=0;
+ if(lesson.mode==='demo')throw new Error('Demo templates cannot pass production validation');
+ validateProductionLesson(lesson);let assets=new Map(),motions=0;
  const getAsset=name=>{
   if(name.includes('..')||path.isAbsolute(name)||/^https?:/.test(name))throw new Error(`Asset must be a local public path: ${name}`);
   if(/(?:source-)?slide-\d+\.png$/i.test(name))throw new Error(`Flattened slide is forbidden in production: ${name}`);
@@ -14,7 +15,12 @@ export function checkPixelLesson(lesson,publicRoot='public'){
   return assets.get(name);
  };
  for(const scene of lesson.scenes){
-  const spec=scene.data.pixelScene;
+  const spec=scene.data.sceneGraph??scene.data.pixelScene;
+  const references=spec.artDirection?.referenceAssets??[];
+  // Source photographs are private creation inputs, not runtime dependencies of an approved sprite.
+  if(spec.presenter){const profile=JSON.parse(readFileSync(path.join(publicRoot,'references/joao/profile.json'),'utf8'));
+   if(spec.presenter.referenceIds.some(id=>!profile.references.some(r=>r.id===id)))throw new Error('Unknown presenter reference ID');}
+  for(const name of references){if(name.includes('..')||path.isAbsolute(name)||!existsSync(path.join(publicRoot,name)))throw new Error(`Missing or invalid production reference: ${name}`);}
   if(spec.background.asset)getAsset(spec.background.asset);
   for(const e of spec.elements){
    if(e.type==='text')wrapText(e);
@@ -50,5 +56,5 @@ export function checkPixelLesson(lesson,publicRoot='public'){
 if(process.argv[1]&&import.meta.url===pathToFileURL(process.argv[1]).href){
  const file=process.argv[2]??'public/lessons/pixel-night/lesson.json';
  const result=checkPixelLesson(JSON.parse(readFileSync(file,'utf8')));
- console.log(`Pixel Night valid: ${result.scenes} scenes, ${result.assets} assets, ${result.teachingMotions} teaching motions. No clipped text or flattened slides.`);
+ console.log(`Authored production valid: ${result.scenes} scenes, ${result.assets} assets, ${result.teachingMotions} teaching motions. No clipped text or flattened slides.`);
 }

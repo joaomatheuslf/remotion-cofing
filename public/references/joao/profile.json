@@ -1,0 +1,91 @@
+{
+  "characterId": "joao-matheus",
+  "name": "João Matheus",
+  "identityAnchors": [
+    "óculos de armação escura",
+    "cabelo curto escuro ondulado/cacheado",
+    "barba curta cheia com grisalho visível",
+    "idade e proporções faciais coerentes com as fotos"
+  ],
+  "references": [
+    {
+      "id": "joao-suit",
+      "path": "references/joao/joao-reference-suit.png",
+      "use": "Estrutura facial e aparência formal."
+    },
+    {
+      "id": "joao-orange-polo",
+      "path": "references/joao/joao-reference-orange-polo.png",
+      "use": "Aparência casual, polo laranja e naturalidade."
+    }
+  ],
+  "styles": {
+    "pixel-night": {
+      "direction": "Pixel art em grade, contornos angulares, neon sobre azul noturno, títulos bitmap. Preserve rosto, óculos e barba nas silhuetas.",
+      "reference": "lessons/pixel-18-layers/night-background.png",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "editorial-pop": {
+      "direction": "Caricatura editorial limpa, contornos expressivos, cores chapadas e contraste quente; composição de revista, sem cards genéricos.",
+      "reference": null,
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "clean-tech": {
+      "direction": "Ilustração técnica contemporânea, geometria precisa e muito espaço de leitura. Host profissional reconhecível; diagramas com objetos próprios.",
+      "reference": null,
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "retro-science": {
+      "direction": "Ilustração científica vintage, papel envelhecido e gravura. Objetos de laboratório e diagramas devem ser camadas independentes.",
+      "reference": "references/styles/retro-science.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "blueprint": {
+      "direction": "Desenho técnico azul, linhas claras, cotas e símbolos separados. Host engenheiro estilizado a partir das fotos.",
+      "reference": "references/styles/blueprint.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "terminal-os": {
+      "direction": "Terminal e janelas de sistema, tipografia monoespaçada, verde/ciano. Host mentor; comandos e caracteres permanecem texto nativo.",
+      "reference": "references/styles/terminal-os.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "cyberpunk-neon": {
+      "direction": "Noite futurista, neon magenta/ciano, contornos luminosos. Personagem reconhecível, sem substituir por humano stock.",
+      "reference": "references/styles/cyberpunk-neon.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "paper-cut": {
+      "direction": "Recortes de papel, textura e sobreposição física. Separe cada recorte e articulação; sombras não incluem outros objetos.",
+      "reference": "references/styles/paper-cut.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "chalkboard": {
+      "direction": "Traço de giz e quadro escuro, professor reconhecível. Escreva rótulos nativamente e anime construção do diagrama.",
+      "reference": "references/styles/chalkboard.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "comic-book": {
+      "direction": "Quadrinhos, traço preto e retícula, poses expressivas. Balões separados e vazios; texto adicionado no motor.",
+      "reference": "references/styles/comic-book.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "glass-lab": {
+      "direction": "Laboratório digital, vidro e transparência, luz fria. Objetos independentes, host profissional; evite transparências que prejudiquem leitura.",
+      "reference": "references/styles/glass-lab.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "corporate-gov": {
+      "direction": "Ilustração institucional sóbria, azul/cinza, hierarquia clara, host formal. Evite stock e excesso de efeitos.",
+      "reference": "references/styles/corporate-gov.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    },
+    "bauhaus": {
+      "direction": "Geometria, cores primárias e formas assimétricas. Estilize o material mantendo a identidade do rosto.",
+      "reference": "references/styles/bauhaus.jpg",
+      "referenceUse": "Referência de estética; nunca usar como slide final."
+    }
+  },
+  "photoStorage": "repository-authorized",
+  "photoDirectoryEnvironment": "JOAO_REFERENCE_DIR"
+}

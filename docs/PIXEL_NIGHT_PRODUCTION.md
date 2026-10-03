@@ -10,7 +10,10 @@ Uma `Lesson` com `designerId: "pixel-night"` (também o padrão quando omitido)
 exige `data.pixelScene` em **todas** as cenas. Num `LessonBlueprint`, forneça o mesmo
 objeto em `segment.pixel`. `compileLesson` valida; `LessonComposition` valida;
 `SceneRenderer` encaminha todos os kinds para `PixelScene` antes do switch genérico.
-Não há fallback de Pixel Night para os outros templates.
+Não há fallback de Pixel Night para os outros templates. Desde 0.8, todos os
+outros designers também exigem `sceneGraph` na produção; consulte
+`AUTHORED_PRODUCTION.md`. Referências do João e geração de objetos estão em
+`ASSET_GENERATION.md`.
 
 Cada plano contém:
 

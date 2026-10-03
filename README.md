@@ -75,8 +75,8 @@ npm run render:designer:clean
 npm run render:designers
 ```
 
-Os exemplos genéricos abaixo requerem um designer explícito como `clean-tech`.
-Para Pixel Night, use o grafo documentado no guia de produção.
+Os exemplos genéricos abaixo exigem `mode: "demo"` e designer explícito.
+Toda aula de produção, em qualquer estilo, exige o grafo autoral documentado no guia.
 
 ## Templates principais
 
@@ -421,7 +421,8 @@ flags de screenshots, um slide inteiro ou animações de entrada.
 
 O Director recebe `segment.pixel` e compila para o mesmo grafo. Todos os tipos de
 cena Pixel Night seguem para `PixelScene`, sem fallback para `GenericTemplates`.
-Outros designers precisam ser escolhidos explicitamente.
+Os demais designers também exigem `data.sceneGraph`, direção de arte e animação interna.
+Templates genéricos são apenas demonstrações explícitas do SDK (`mode: "demo"`).
 
 A aula de referência `public/lessons/pixel-night/lesson.json` tem 18 cenas montadas
 com elementos independentes. João possui corpo e braço articulados; redes neurais
@@ -445,3 +446,20 @@ A prévia de arquivos do iPhone não executa o player; use um navegador real.
 O motor não inventa assets: o agente precisa produzir/resolver cada objeto e dirigir
 seu movimento. Guia obrigatório: [PIXEL_NIGHT_PRODUCTION.md](docs/PIXEL_NIGHT_PRODUCTION.md).
 Instruções para agentes: [AGENTS.md](AGENTS.md).
+
+## Todos os estilos + suas referências
+
+A versão 0.8 aplica a produção por elementos aos 13 designers. As referências fotográficas autorizadas de João
+e as diretrizes estéticas estão em `public/references/joao/profile.json`. O plano
+de apresentador deve declarar referências e tratamento; corpo e braço são separados.
+
+- [Contrato de produção autoral](docs/AUTHORED_PRODUCTION.md)
+- [Diretrizes e chamadas para gerar assets](docs/ASSET_GENERATION.md)
+
+```bash
+npm run asset:request -- --id joao-body --style paper-cut --kind presenter-body --description "João apresenta a rede apontando à direita, mantendo óculos e barba grisalha."
+npm run test:production
+```
+
+`asset:request` prepara os argumentos da ferramenta de imagem com referências reais.
+O agente chama a ferramenta, revisa e salva cada objeto; o motor monta e anima.

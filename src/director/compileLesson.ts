@@ -1,4 +1,4 @@
-import {parsePixelScene,validatePixelLesson} from "../pixel/schema.mjs";
+import {parsePixelScene,parseAuthoredScene,validateProductionLesson} from "../pixel/schema.mjs";
 import {Lesson, Scene} from "../engine/types";
 import {theme} from "../engine/theme";
 import {BlueprintSegment, LessonBlueprint} from "./types";
@@ -223,6 +223,7 @@ export const compileSegment = (segment:BlueprintSegment): Scene => {
     duration: segment.duration ?? defaultDuration(kind),
     data: {
       ...baseData,
+      ...(segment.sceneGraph?{sceneGraph:parseAuthoredScene(segment.sceneGraph)}:{}),
       ...(segment.pixel?{pixelScene:parsePixelScene(segment.pixel)}:{}),
       variant: selectTemplateVariant(kind,seed),
     },
@@ -231,12 +232,13 @@ export const compileSegment = (segment:BlueprintSegment): Scene => {
 
 export const compileLesson = (blueprint:LessonBlueprint): Lesson => {
  const lesson:Lesson={
+  mode:blueprint.mode??"production",
   id: blueprint.id,
   title: blueprint.title,
   designerId: blueprint.designerId??"pixel-night",
   theme: "prompt-forge",
   scenes: blueprint.segments.map(compileSegment),
 };
- validatePixelLesson(lesson);
+ validateProductionLesson(lesson);
  return lesson;
 };
