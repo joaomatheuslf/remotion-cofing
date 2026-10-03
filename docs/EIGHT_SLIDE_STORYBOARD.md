@@ -18,7 +18,7 @@ elementos ilustrativos se movem. Texto não significa tela imóvel.
 
 | Slide | Papel | O que precisa acontecer |
 | --- | --- | --- |
-| 1 | Metáfora ou problema visual | Mostrar a pergunta central com uma ação observável. |
+| 1 | Abertura visual | Exibir o nome do assunto e uma pergunta curta na própria cena; começar a metáfora ou o problema com uma ação observável. Quem chegou pelo Reel precisa reconhecer imediatamente se a aula é sobre machine learning, redes neurais, deep learning, LLMs etc. |
 | 2 | Explicação | Definir em palavras simples o que o público acabou de ver. |
 | 3 | Exemplo ou mecanismo | Mostrar entrada, mudança e resultado com peças separadas. |
 | 4 | Explicação | Nomear a relação causal, sem repetir a imagem em prosa. |
@@ -30,12 +30,16 @@ elementos ilustrativos se movem. Texto não significa tela imóvel.
 Esses papéis são referência, não moldes gráficos. Cada cena deve responder à
 pergunta específica do episódio. Replicar o mesmo fluxo de ícones em todos os
 assuntos produz um template genérico, mesmo com a paleta Pixel Night.
+O título da página HTML, o seletor da aula ou uma legenda externa não substituem
+o tema visível no primeiro slide. Faça o título em texto nativo, dentro da área
+segura, sem cobrir a demonstração; revele-o no início da animação e deixe tempo
+para leitura. Use a grafia correta dos conceitos.
 
 ## Aula 01: ordem corrigida
 
 | Slide | Tipo | Conteúdo de aprovação | Movimento semântico planejado |
 | --- | --- | --- | --- |
-| 1 | Visual | João abre o guarda-chuva e mostra conceitos sob ele. | Armação abre; ícones entram em setores distintos. |
+| 1 | Visual | Título “O guarda-chuva da IA” e pergunta “O que é esse guarda-chuva e o que é IA?”; João abre o guarda-chuva e mostra conceitos sob ele. | Título aparece primeiro; armação abre; ícones entram em setores distintos. |
 | 2 | Texto | IA reúne muitos métodos e conceitos; o guarda-chuva é analogia didática. | Palavras-chave aparecem conforme João aponta. |
 | 3 | Visual | Tarefas de IA: imagem, conversa e rota. | Cada exemplo executa uma ação curta própria. |
 | 4 | Texto | IA é o campo que busca criar sistemas para reconhecer, prever, responder ou planejar. | Exemplos iluminam os verbos correspondentes. |
@@ -78,6 +82,11 @@ como se fosse a aula. O grafo de produção reconstrói cada objeto e o texto pa
 permitir movimento que ensina.
 
 ## Próximos episódios desta série
+
+No primeiro slide de cada episódio, escreva o nome completo do assunto:
+“Machine learning”, “Redes neurais”, “Deep learning”, “IA generativa”, “LLMs”
+e “Modelos de difusão”. Uma pergunta curta pode acompanhar o nome; mantenha os
+dois legíveis dentro da imagem, inclusive no celular.
 
 Machine learning: exemplos → treino → e-mail novo → previsão. Redes neurais:
 pixels → conexões → ajuste de pesos → classificação, com sinal percorrendo fios.

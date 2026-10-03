@@ -16,12 +16,13 @@
     {
       "number": 1,
       "kind": "visual",
-      "title": "POR QUE GUARDA-CHUVA?",
+      "title": "O GUARDA-CHUVA DA IA",
+      "openingQuestion": "O que é esse guarda-chuva e o que é IA?",
       "narrationCue": "Pessoal, quando digo guarda-chuva da IA, estou usando uma comparação para organizar as ideias.",
       "teachingGoal": "Visualizar um campo amplo que reúne muitos métodos e conceitos.",
-      "composition": "João abre um grande guarda-chuva ciano; ícones distintos se posicionam sob ele.",
-      "separateElements": ["joao-body", "joao-arm", "umbrella-canopy", "umbrella-handle", "rule-icon", "data-icon", "image-icon", "chat-icon", "title"],
-      "teachingMotion": "Guarda-chuva abre e os ícones entram nos setores à medida que João os nomeia. Braço gira no ombro."
+      "composition": "Título da aula e pergunta aparecem dentro da cena; João abre um grande guarda-chuva ciano; ícones distintos se posicionam sob ele.",
+      "separateElements": ["joao-body", "joao-arm", "umbrella-canopy", "umbrella-handle", "rule-icon", "data-icon", "image-icon", "chat-icon", "title", "opening-question"],
+      "teachingMotion": "Título e pergunta são lidos primeiro; guarda-chuva abre e os ícones entram nos setores à medida que João os nomeia. Braço gira no ombro."
     },
     {
       "number": 2,
