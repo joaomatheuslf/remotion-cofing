@@ -14,6 +14,13 @@ antigas do SDK, identificadas como demo; nunca o use para contornar a produção
 ## Recorte obrigatório das mini aulas
 
 - Uma pergunta central e um resultado de aprendizagem por mini aula.
+- Estrutura padrão: introdução breve + UM tópico principal bem explicado. João
+  relatou que essa combinação já ocupa o tempo máximo; não adicione outros tópicos
+  completos para preencher uma lista.
+- Rápido não significa raso: explique o significado e como funciona, com um exemplo
+  concreto quando ajudar. Corte assuntos extras antes de cortar a compreensão.
+- Sempre anime os elementos para ensinar: fluxo, transformação, conexão ou gesto
+  relacionado à explicação. Uma sequência de imagens com transições não atende.
 - Planeje aproximadamente 2–3 minutos, ajustando à explicação e à fala real do João.
 - Calibração relatada por João: explicar a analogia do guarda-chuva, o que é IA e
   sua origem já ocupou cerca de 2min40. Não encaixe também ML, redes neurais, DL,

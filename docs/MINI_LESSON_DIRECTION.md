@@ -4,6 +4,23 @@ Cada mini aula responde a uma pergunta central com uma explicação compreensív
 para um iniciante, mantendo precisão suficiente para um especialista. O objetivo
 é entendimento; mencionar muitos nomes não equivale a explicar cada conceito.
 
+## Introdução breve + um tópico com profundidade
+
+João confirmou que a introdução e um único tópico já ocupam o tempo máximo da
+mini aula no seu ritmo de apresentação. Essa é a estrutura padrão: contextualizar
+brevemente e desenvolver um tópico principal, sem abrir várias aulas dentro dela.
+
+Conteúdo rápido precisa deixar uma compreensão utilizável. Explique o que o
+conceito significa, como funciona no nível necessário e um exemplo concreto quando
+ajudar. Inclua uma distinção ou limite se for indispensável para evitar uma ideia
+errada. Não transforme esses pontos em uma lista mecânica: use apenas o que a
+pergunta pede. Reduza assuntos extras antes de reduzir a clareza.
+
+A aula deve ser bem animada: movimento de elementos dentro das cenas que mostre
+conexões, processamento, mudança ou causa e efeito. Não substitua isso por
+transições, zoom de página ou efeitos decorativos. Dê tempo ao aluno para observar
+a ação, sincronizando-a com a fala.
+
 ## Calibração de duração
 
 João relatou que explicar a analogia do guarda-chuva, o que é inteligência
