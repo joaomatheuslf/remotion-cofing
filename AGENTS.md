@@ -30,6 +30,15 @@ antigas do SDK, identificadas como demo; nunca o use para contornar a produção
 - Primeiro escreva a fala simples e completa, estime/ensaie o tempo e inclua pausas
   e tempo de leitura/animação. Só depois defina cenas, slides e quantidade de assets.
 - Não use um número fixo de slides ou a lista inteira de tópicos para dirigir o roteiro.
+- **Série Pixel Night do guarda-chuva da IA (aprovada por João):** use oito slides
+  por mini aula como modelo editorial: quatro cenas visuais didáticas e quatro
+  cenas com explicação curta, intercaladas. O roteiro vem antes da divisão; ajuste
+  as ações e a duração sem apressar a fala. Em outras séries, a quantidade deriva
+  do roteiro. Veja `docs/EIGHT_SLIDE_STORYBOARD.md` e o exemplo
+  `examples/mini-lessons/ia-umbrella/storyboard.json`.
+- A primeira aula abre com a imagem do guarda-chuva, explica o que é IA, apresenta
+  a origem do nome (proposta de 1955 e encontro de 1956) e fecha com convite breve
+  às próximas mini aulas. O fechamento não é uma lista numerada de todo o curso.
 - Se o conteúdo exceder o tempo, reduza o recorte ou divida em aulas; não acelere a
   fala nem elimine a explicação para conservar todos os tópicos.
 - Cada animação deve ajudar a responder à pergunta da aula. Todos os estilos seguem
@@ -48,6 +57,8 @@ Guia: `docs/MINI_LESSON_DIRECTION.md`.
 6. Monte cenário, objetos, textos, fios, nós, corpo e braço com IDs, `z`, `parent`, pivô.
 7. Anime ações dentro da cena e sincronize-as com a fala. Transições não bastam.
 8. Prévia HTML e storyboard; após aprovação visual, renderize o vídeo.
+   Uma imagem de storyboard pode aparecer na prévia estática, mas nunca é o asset
+   achatado usado como cena final. Na produção, separe objetos e texto nativo.
 9. Execute `npm run check`, `npm run test:production`, `npm run production:validate -- caminho/lesson.json`.
 
 ## João em todos os estilos

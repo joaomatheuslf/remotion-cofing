@@ -466,6 +466,11 @@ O agente chama a ferramenta, revisa e salva cada objeto; o motor monta e anima.
 
 ## Direção das mini aulas
 
+Para a série Pixel Night do guarda-chuva da IA, o modelo de oito slides com
+momentos visuais e explicações intercaladas está em
+[`docs/EIGHT_SLIDE_STORYBOARD.md`](docs/EIGHT_SLIDE_STORYBOARD.md). A aula 01 é
+o exemplo de ordem, texto, aprovação visual e movimento didático para os agentes.
+
 Uma pergunta central por mini aula, com aproximadamente 2–3 minutos e ritmo
 adequado à fala do João. Primeiro roteiro e estimativa com pausas; depois slides
 e animações. Se o conteúdo não couber, divida o recorte em novas aulas.

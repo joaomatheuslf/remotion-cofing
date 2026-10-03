@@ -256,3 +256,11 @@ todas as áreas não deve substituir explicações próprias.
 A quantidade de slides deriva do roteiro; nunca comprima a fala para caber em
 um storyboard de quantidade fixa. Quando exceder a duração, divida o conteúdo
 em mini aulas. Consulte `docs/MINI_LESSON_DIRECTION.md`.
+
+Exceção editorial definida por João para a série Pixel Night do guarda-chuva da
+IA: depois do recorte e da fala, organize **oito slides** no ritmo de quatro
+ações visuais e quatro explicações legíveis. A aula 01 já teve ordem e fechamento
+aprovados; use `docs/EIGHT_SLIDE_STORYBOARD.md` e
+`examples/mini-lessons/ia-umbrella/storyboard.json`. Mostre o storyboard estático
+para aprovação antes de gerar peças e animar. O quadro estático nunca substitui
+os elementos separados do `sceneGraph` na produção.

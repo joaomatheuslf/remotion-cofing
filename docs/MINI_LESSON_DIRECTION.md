@@ -34,6 +34,13 @@ visuais. Se houver gravação ou timestamps, eles prevalecem sobre a estimativa.
 Não imponha um número fixo de palavras, segundos por slide ou quantidade de cenas.
 Não acelere a fala para encaixar um roteiro que precisa de outra aula.
 
+Para a série Pixel Night do guarda-chuva da IA, João aprovou um **modelo editorial
+de oito slides**: quatro demonstrações visuais e quatro explicações curtas. Essa
+decisão vale para a série depois de definido o recorte e escrita a fala; os oito
+slides não autorizam inserir assuntos extras nem comprimir uma explicação.
+Consulte `EIGHT_SLIDE_STORYBOARD.md` para a ordem da primeira aula e o processo
+de aprovação antes da animação.
+
 ## Ordem de direção
 
 1. Defina a pergunta que a pessoa deve conseguir responder ao final.

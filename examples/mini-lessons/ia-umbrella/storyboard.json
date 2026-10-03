@@ -1,0 +1,102 @@
+{
+  "status": "storyboard-approval-reference",
+  "lessonId": "ia-umbrella-introduction",
+  "series": "Guarda-chuva da IA",
+  "designer": "pixel-night",
+  "canvas": { "width": 1080, "height": 864 },
+  "targetDurationSeconds": 160,
+  "centralQuestion": "O que é o guarda-chuva da IA e de onde veio o nome inteligência artificial?",
+  "learningOutcome": "Explicar que IA é um campo amplo, reconhecer a analogia do guarda-chuva e situar a proposta de 1955 e o encontro de 1956.",
+  "presenter": {
+    "characterId": "joao-matheus",
+    "referenceIds": ["joao-orange-polo"],
+    "treatment": "Pixel Night; óculos escuros, cabelo curto escuro e barba com grisalho; polo laranja nesta aula."
+  },
+  "slides": [
+    {
+      "number": 1,
+      "kind": "visual",
+      "title": "POR QUE GUARDA-CHUVA?",
+      "narrationCue": "Pessoal, quando digo guarda-chuva da IA, estou usando uma comparação para organizar as ideias.",
+      "teachingGoal": "Visualizar um campo amplo que reúne muitos métodos e conceitos.",
+      "composition": "João abre um grande guarda-chuva ciano; ícones distintos se posicionam sob ele.",
+      "separateElements": ["joao-body", "joao-arm", "umbrella-canopy", "umbrella-handle", "rule-icon", "data-icon", "image-icon", "chat-icon", "title"],
+      "teachingMotion": "Guarda-chuva abre e os ícones entram nos setores à medida que João os nomeia. Braço gira no ombro."
+    },
+    {
+      "number": 2,
+      "kind": "explanation",
+      "title": "POR QUE GUARDA-CHUVA?",
+      "visibleText": "Porque IA reúne muitas maneiras de construir sistemas. O guarda-chuva é uma comparação didática para mostrar esse conjunto.",
+      "takeaway": "A analogia não tem origem única documentada.",
+      "narrationCue": "Não é um termo técnico inventado numa data específica; é uma forma simples de mostrar que essas abordagens cabem no mesmo campo.",
+      "teachingGoal": "Distinguir o nome do campo da metáfora usada para explicá-lo.",
+      "separateElements": ["title", "sentence-1", "sentence-2", "takeaway"],
+      "teachingMotion": "Realce de 'IA' e 'comparação didática' acompanha a fala; o guarda-chuva pequeno se mantém aberto."
+    },
+    {
+      "number": 3,
+      "kind": "visual",
+      "title": "O QUE É IA?",
+      "narrationCue": "A IA busca criar sistemas para tarefas como reconhecer uma imagem, responder perguntas e planejar uma rota.",
+      "teachingGoal": "Mostrar capacidades concretas antes da definição formal.",
+      "composition": "João aponta para três janelas: reconhecimento de imagem, conversa e mapa de rota.",
+      "separateElements": ["joao-body", "joao-arm", "image-window", "image-result", "chat-window", "chat-message", "map", "route-path", "title"],
+      "teachingMotion": "Imagem é reconhecida, mensagem aparece por partes e ponto percorre a rota; cada ação segue seu exemplo narrado."
+    },
+    {
+      "number": 4,
+      "kind": "explanation",
+      "title": "O QUE É IA?",
+      "visibleText": "Inteligência artificial é a área que cria sistemas capazes de reconhecer, prever, responder ou planejar.",
+      "takeaway": "É um campo de estudo, não uma ferramenta só.",
+      "narrationCue": "IA é o nome amplo desse campo de pesquisa e de suas aplicações.",
+      "teachingGoal": "Definir a IA com linguagem simples, sem equipará-la a uma única ferramenta.",
+      "separateElements": ["title", "definition", "verb-highlights", "takeaway"],
+      "teachingMotion": "Cada verbo ilumina o exemplo correspondente do slide anterior, sem fazer a página inteira se mover."
+    },
+    {
+      "number": 5,
+      "kind": "visual",
+      "title": "1955 → 1956",
+      "narrationCue": "O nome apareceu numa proposta de 1955. O encontro de pesquisadores aconteceu em Dartmouth, em 1956.",
+      "teachingGoal": "Separar a data da proposta da data do encontro.",
+      "composition": "Documento datado de 1955 e calendário de Dartmouth em 1956; quatro pesquisadores representados por silhuetas não identificadas.",
+      "separateElements": ["document", "year-1955", "calendar", "year-1956", "researcher-silhouettes", "timeline-arrow", "title"],
+      "teachingMotion": "Documento recebe 1955; linha temporal avança; calendário revela 1956."
+    },
+    {
+      "number": 6,
+      "kind": "explanation",
+      "title": "QUEM DEU O NOME?",
+      "visibleText": "John McCarthy deu o nome à área numa proposta de 1955, escrita com Minsky, Rochester e Shannon. Em 1956, o grupo se reuniu em Dartmouth.",
+      "takeaway": "1955: proposta. 1956: encontro.",
+      "narrationCue": "O nome inteligência artificial é atribuído a John McCarthy; o projeto foi assinado também por Marvin Minsky, Nathaniel Rochester e Claude Shannon.",
+      "teachingGoal": "Atribuir o nome corretamente e fixar a cronologia.",
+      "separateElements": ["title", "mccarthy-name", "coauthors", "year-1955", "year-1956", "takeaway"],
+      "teachingMotion": "Os nomes aparecem com a proposta; as duas datas são realçadas em ordem."
+    },
+    {
+      "number": 7,
+      "kind": "visual",
+      "title": "MUITAS TÉCNICAS",
+      "narrationCue": "Sob o mesmo guarda-chuva há diferentes formas de construir IA.",
+      "teachingGoal": "Retomar visualmente a amplitude do campo sem ensinar todos os tópicos seguintes.",
+      "composition": "Guarda-chuva IA com ramos para regras, aprendizado com dados e aplicações; João apresenta a visão geral.",
+      "separateElements": ["joao-body", "joao-arm", "umbrella-canopy", "umbrella-handle", "rules-branch", "data-branch", "neural-branch", "language-branch", "title"],
+      "teachingMotion": "Ramos surgem sob o guarda-chuva e recebem um pulso; nenhuma área vira aula completa neste slide."
+    },
+    {
+      "number": 8,
+      "kind": "explanation",
+      "title": "MUITAS TÉCNICAS",
+      "visibleText": "Debaixo desse guarda-chuva há muitos métodos e conceitos. Nas próximas mini aulas, vamos entender machine learning, redes neurais e tokenização.",
+      "takeaway": "Uma ideia por vez.",
+      "narrationCue": "Nas próximas mini aulas a gente abre essas partes aos poucos, sem tentar aprender tudo hoje.",
+      "teachingGoal": "Encerrar com convite curto, sem lista numerada de todas as aulas.",
+      "separateElements": ["title", "sentence-1", "sentence-2", "emphasis-terms", "takeaway"],
+      "teachingMotion": "Destaques dos três exemplos aparecem no ritmo da fala; o foco final é 'Uma ideia por vez'."
+    }
+  ],
+  "productionNote": "Este JSON descreve o storyboard de aprovação. Reconstrua cada elemento em sceneGraph/pixelScene após aprovação; nunca use a folha de storyboard como slide achatado na animação."
+}
