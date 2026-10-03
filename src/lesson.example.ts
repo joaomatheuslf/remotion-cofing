@@ -3,6 +3,7 @@ import {theme} from "./engine/theme";
 
 export const exampleLesson: Lesson = {
   id: "prompt-basico",
+  designerId: "clean-tech",
   title: "Prompt Forge — Fundamentos",
   theme: "prompt-forge",
   scenes: [

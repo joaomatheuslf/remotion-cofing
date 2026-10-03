@@ -1,11 +1,13 @@
 import React from "react";
 import {Series} from "remotion";
 import {Lesson} from "./engine/types";
+import {validatePixelLesson} from "./pixel/schema.mjs";
 import {SceneRenderer} from "./engine/SceneRenderer";
 import {DesignerProvider} from "./designers/DesignerProvider";
 import {TransitionOverlay} from "./transitions/TransitionOverlay";
 
 export const LessonComposition: React.FC<{lesson:Lesson}> = ({lesson}) => {
+  React.useMemo(()=>validatePixelLesson(lesson),[lesson]);
   return (
     <DesignerProvider designerId={lesson.designerId}>
       <Series>

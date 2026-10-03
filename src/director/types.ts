@@ -1,3 +1,4 @@
+import type {PixelSceneSpec} from "../pixel/types";
 import {DesignerId} from "../designers/types";
 
 export type TeachingIntent =
@@ -48,6 +49,7 @@ export type BlueprintSegment = {
   intent: TeachingIntent;
   duration?: number;
   visualStyle?: VisualStyle;
+  pixel?: PixelSceneSpec;
   metaphor?: VisualMetaphor;
   content?: string[];
   subtitle?: string;

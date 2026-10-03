@@ -1,4 +1,5 @@
 import {z} from "zod";
+import {validatePixelLesson} from "../pixel/schema.mjs";
 
 export const DesignerIdSchema = z.enum([
   "pixel-night",
@@ -58,9 +59,11 @@ export const SceneSchema = z.object({
 export const LessonSchema = z.object({
   id: z.string().min(1),
   title: z.string().min(1),
-  designerId: DesignerIdSchema.optional(),
+  designerId: DesignerIdSchema.default("pixel-night"),
   theme: z.literal("prompt-forge").optional(),
   scenes: z.array(SceneSchema).min(1),
+}).superRefine((lesson,ctx)=>{
+  try {validatePixelLesson(lesson);} catch(error){ctx.addIssue({code:"custom",message:error instanceof Error?error.message:String(error)});}
 });
 
 export const parseLesson = (input:unknown) => LessonSchema.parse(input);

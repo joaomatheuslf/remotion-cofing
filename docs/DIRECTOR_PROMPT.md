@@ -80,7 +80,8 @@ Use para nível, energia, qualidade, risco, progresso, confiança, carga ou recu
 - Agrupe frases com a mesma ideia.
 - Prefira 3 a 5 elementos visuais.
 - Se o movimento puder explicar a lógica, prefira metáfora.
-- Se o conteúdo apenas precisa ser organizado, use template normal.
+- Para designers gerais, conteúdo que só precisa de organização pode usar template normal.
+- Para Pixel Night, toda cena exige `segment.pixel`; templates genéricos não são uma saída válida.
 - Use `token-flow` para fluxo por sistema.
 - Use `context-window` para capacidade.
 - Use `queue` para processamento em fila.
@@ -94,6 +95,7 @@ Use para nível, energia, qualidade, risco, progresso, confiança, carga ou recu
 ```json
 {
   "id": "prompt-basico",
+  "designerId": "clean-tech",
   "title": "Fundamentos de Prompt",
   "segments": [
     {
@@ -209,3 +211,25 @@ Por designer:
 - `bauhaus`: João opcional, em composição geométrica.
 
 Consulte `docs/PRESENTER_REFERENCE.md` e `references/presenter-profile.json`.
+
+
+## Pixel Night: contrato de produção obrigatório
+
+Pixel Night é o padrão quando João não escolher outro designer. Leia
+`docs/PIXEL_NIGHT_PRODUCTION.md` e `AGENTS.md` antes de produzir a aula.
+O roteiro por si só não é suficiente: cada segmento precisa de `pixel` com objetivo
+didático, background de cenário, elementos independentes, IDs, posição, z, rig e
+movimento semântico. `compileLesson` rejeita o segmento sem esse plano.
+
+Crie storyboard → produza assets transparentes separados → monte o grafo → anime
+os objetos dentro da cena → revise no HTML → renderize. Cenário pode ser imagem;
+rótulos, explicações e títulos são nativos. Texto nunca deve ficar cortado em PNG.
+
+Para rede neural, planeje nós/fios separados e sinal percorrendo suas conexões.
+Para difusão, separe ruído e imagem, reduzindo ruído ao longo da cena. Corpo e braço
+de João precisam de parent e pivô. Robô flutuante e entrada de texto não substituem
+movimento didático. Não converta uma página inteira em faixas ou faça zoom nela.
+
+O exemplo antigo de Blueprint acima é para um designer geral. Para Pixel Night,
+consulte a aula executável `public/lessons/pixel-night/lesson.json`; transforme cada
+`data.pixelScene` em `segment.pixel` quando usar o compilador.

@@ -1,5 +1,6 @@
 import React from "react";
 import {Scene} from "./types";
+import {PixelScene} from "../pixel/PixelScene";
 import {useDesigner} from "../designers/DesignerProvider";
 import {getDesignerSceneOverride} from "../designers/sceneOverrides";
 import {PromptAnatomy} from "../templates/PromptAnatomy";
@@ -30,6 +31,7 @@ import {
 export const SceneRenderer: React.FC<{scene:Scene}> = ({scene}) => {
   const data = scene.data ?? {};
   const designer=useDesigner();
+  if(designer.id==="pixel-night") return <PixelScene scene={scene}/>;
   const DesignerOverride=getDesignerSceneOverride(designer.id,scene.kind);
 
   if(DesignerOverride){

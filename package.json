@@ -1,31 +1,42 @@
 {
   "name": "remotion-cofing",
-  "version": "0.6.0",
+  "version": "0.7.0",
   "private": true,
-  "description": "Prompt Forge — engine de aulas animadas em Remotion",
+  "description": "Prompt Forge \u2014 engine de aulas animadas em Remotion",
   "scripts": {
     "start": "remotion studio",
-    "render": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4",
+    "render": "remotion render Pixel18LayeredIA out/pixel-night-ia.mp4",
     "check": "tsc --noEmit",
+    "pixel:html": "python3 entrega-native/build_html.py",
     "render:showcase": "remotion render EngineShowcase out/engine-showcase.mp4",
     "render:slide": "remotion render PromptForgeSlide out/prompt-forge-slide.mp4",
     "render:director": "remotion render DirectorDemo out/director-demo.mp4",
     "render:outline": "remotion render OutlineDemo out/outline-demo.mp4",
-    "render:pixel": "remotion render PixelGameDemo out/pixel-game-demo.mp4",
+    "render:pixel": "remotion render Pixel18LayeredIA out/pixel-night-ia.mp4",
     "render:metaphors": "remotion render MetaphorDemo out/metaphor-demo.mp4",
     "render:designer:pixel": "remotion render DesignerPixelNight out/designer-pixel-night.mp4",
     "render:designer:editorial": "remotion render DesignerEditorialPop out/designer-editorial-pop.mp4",
     "render:designer:clean": "remotion render DesignerCleanTech out/designer-clean-tech.mp4",
     "render:designers": "remotion render DesignerGallery out/designer-gallery.mp4",
     "designer:new": "node scripts/create-designer.mjs",
-    "render:storyboard": "remotion render StoryboardDemo out/storyboard-demo.mp4"
+    "render:storyboard": "remotion render StoryboardDemo out/storyboard-demo.mp4",
+    "test:pixel": "node --import ./tests/register-typescript.mjs --test tests/pixel-*.test.mjs",
+    "pixel:validate": "node scripts/check-pixel.mjs",
+    "pixel:preview": "node scripts/pixel-preview.mjs",
+    "pixel:build": "python3 scripts/build-pixel-lesson.py",
+    "prepixel:html": "npm run pixel:validate",
+    "render:pixel:lesson": "remotion render Pixel18LayeredIA out/pixel-night-ia.mp4",
+    "prerender:pixel:lesson": "npm run pixel:validate",
+    "prerender:designer:pixel": "npm run pixel:validate",
+    "prerender:pixel": "npm run pixel:validate",
+    "prerender": "npm run pixel:validate"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
     "remotion": "4.0.530",
-    "zod": "^4.1.11"
+    "zod": "4.5.4"
   },
   "devDependencies": {
     "@types/react": "^19.1.16",

@@ -1,0 +1,13 @@
+node_modules/
+out/
+*.mp4
+*.zip
+entrega-native/Aula_IA_Pixel_Night_Interativa.html
+entrega-native/html-player/
+entrega-native/layers/*.png
+entrega-native/layers/slide-*/
+entrega-native/*preview*.png
+entrega-native/network-*.png
+entrega-native/player-check.js
+entrega-native/chrome-log.txt
+public/lessons/pixel-18-layers/preview-*

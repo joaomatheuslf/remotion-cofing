@@ -3,6 +3,7 @@ import {theme} from "./theme";
 
 export const engineDemoLesson: Lesson = {
   id: "engine-showcase",
+  designerId: "clean-tech",
   title: "Prompt Forge Engine — Showcase",
   theme: "prompt-forge",
   scenes: [

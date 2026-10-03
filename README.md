@@ -51,11 +51,11 @@ npm run start
 
 - `PromptForgeSlide` — exemplo inicial
 - `EngineShowcase` — showcase dos templates
-- `DirectorDemo` — aula compilada a partir de Blueprint
+- `DirectorDemo` — aula clean-tech compilada a partir de Blueprint
 - `OutlineDemo` — aula criada a partir de outline textual
-- `PixelGameDemo` — explainer gamificado em pixel art
+- `PixelGameDemo` — fluxo de exemplos com elementos Pixel Night separados
 - `MetaphorDemo` — showcase das metáforas animadas
-- `DesignerPixelNight` — mesma aula em Pixel Night
+- `DesignerPixelNight` — grafo Pixel Night com animação por elemento
 - `DesignerEditorialPop` — mesma aula em Editorial Pop
 - `DesignerCleanTech` — mesma aula em Clean Tech
 - `DesignerGallery` — galeria animada de todos os designers
@@ -74,6 +74,9 @@ npm run render:designer:editorial
 npm run render:designer:clean
 npm run render:designers
 ```
+
+Os exemplos genéricos abaixo requerem um designer explícito como `clean-tech`.
+Para Pixel Night, use o grafo documentado no guia de produção.
 
 ## Templates principais
 
@@ -144,7 +147,9 @@ docs/METAPHORS.md
 
 ## Designers
 
-A mesma aula pode trocar de identidade visual sem alterar as cenas:
+Os designers gerais compartilham os templates. Pixel Night tem um contrato próprio
+de elementos separados; ele exige reautoria do plano visual, não só troca de cores.
+Exemplo para os designers gerais:
 
 ~~~ts
 {
@@ -361,7 +366,7 @@ references/presenter-profile.json
 docs/PRESENTER_REFERENCE.md
 ```
 
-As duas fotos originais e as dez referências visuais dos novos designers ficam empacotadas no plugin privado **Aulas Animadas do João**, para que o plugin use a mesma identidade visual do projeto.
+As fotos originais e referências visuais ficam empacotadas no plugin privado **Aulas Animadas do João**, para que o plugin use a mesma identidade visual do projeto.
 
 
 ## Arquitetura 0.6
@@ -406,3 +411,37 @@ docs/ROADMAP_SELECTED_1_2_4_5_6_7_8_9_11_12.md
 ```
 
 Observação: o registry possui 30 metáforas semânticas; neste momento, 5 já têm renderer completo. As demais estão registradas para implementação incremental, sem fingir que já renderizam.
+
+## Pixel Night obrigatório: elementos separados e animação interna
+
+Pixel Night é o designer padrão. Ele exige `data.pixelScene` em todas as cenas:
+texto nativo, sprites transparentes, nós, conexões, ordem de camadas, pivôs e um
+movimento que explique a ideia. O motor falha se só receber bullets genéricos,
+flags de screenshots, um slide inteiro ou animações de entrada.
+
+O Director recebe `segment.pixel` e compila para o mesmo grafo. Todos os tipos de
+cena Pixel Night seguem para `PixelScene`, sem fallback para `GenericTemplates`.
+Outros designers precisam ser escolhidos explicitamente.
+
+A aula de referência `public/lessons/pixel-night/lesson.json` tem 18 cenas montadas
+com elementos independentes. João possui corpo e braço articulados; redes neurais
+possuem fios, nós e sinais que percorrem suas conexões; difusão remove ruído sobre
+uma imagem separada. Os textos explicativos são nativos, sem recortes horizontais.
+
+```bash
+npm run check
+npm run test:pixel
+npm run pixel:validate
+npm run pixel:preview
+npm run pixel:html
+npm run render:pixel:lesson
+```
+
+No Studio: `Pixel18LayeredIA`, `PixelNightStoryboardA` e `PixelNightStoryboardB`.
+O HTML é gerado em `entrega-native/Aula_IA_Pixel_Night_Interativa.html`, com play,
+pausa, navegação e timeline. Ele usa o mesmo grafo e movimento do Remotion.
+A prévia de arquivos do iPhone não executa o player; use um navegador real.
+
+O motor não inventa assets: o agente precisa produzir/resolver cada objeto e dirigir
+seu movimento. Guia obrigatório: [PIXEL_NIGHT_PRODUCTION.md](docs/PIXEL_NIGHT_PRODUCTION.md).
+Instruções para agentes: [AGENTS.md](AGENTS.md).

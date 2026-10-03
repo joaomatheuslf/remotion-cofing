@@ -2,6 +2,7 @@ import {LessonBlueprint} from "./types";
 
 export const promptLessonBlueprint: LessonBlueprint = {
   id: "prompt-director-demo",
+  designerId: "clean-tech",
   title: "Prompt — do pedido ao comando",
   segments: [
     {

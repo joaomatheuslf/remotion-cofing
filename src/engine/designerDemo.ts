@@ -1,4 +1,5 @@
 import {Lesson} from "./types";
+import pixelLesson from "../../public/lessons/pixel-night/lesson.json";
 
 const scenes: Lesson["scenes"] = [
   {
@@ -50,10 +51,7 @@ const makeLesson = (
   scenes
 });
 
-export const designerPixelNight = makeLesson(
-  "pixel-night",
-  "designer-pixel-night"
-);
+export const designerPixelNight:Lesson={...pixelLesson,designerId:"pixel-night",scenes:[pixelLesson.scenes[0],pixelLesson.scenes[4],pixelLesson.scenes[6]] as Lesson["scenes"]};
 
 export const designerEditorialPop = makeLesson(
   "editorial-pop",

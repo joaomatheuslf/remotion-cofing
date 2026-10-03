@@ -2,6 +2,7 @@ import {compileLesson} from "./compileLesson";
 import {parseOutline} from "./parseOutline";
 
 const outline = `
+designer: clean-tech
 ## [open] Prompt Forge
 kicker: AULA ANIMADA
 subtitle: Do pedido vago a uma instrução clara para IA.

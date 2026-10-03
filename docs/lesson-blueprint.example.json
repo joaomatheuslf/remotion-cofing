@@ -1,7 +1,7 @@
 {
   "id": "aula-exemplo",
   "title": "Aula gerada pelo diretor",
-  "designerId": "editorial-pop",
+  "designerId": "clean-tech",
   "segments": [
     {
       "id": "intro",
@@ -37,7 +37,12 @@
       "title": "Teste rápido",
       "quiz": {
         "question": "Qual alternativa está correta?",
-        "options": ["A", "B", "C", "D"],
+        "options": [
+          "A",
+          "B",
+          "C",
+          "D"
+        ],
         "answer": 1
       }
     }

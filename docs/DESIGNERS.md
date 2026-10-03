@@ -160,3 +160,8 @@ docs/PRESENTER_REFERENCE.md
 ```
 
 Os designers `blueprint` e `bauhaus` podem funcionar sem personagem. Nos demais, quando a composição pedir host/professor/avatar, represente João e preserve as âncoras faciais.
+
+## Pixel Night em produção
+
+Não é apenas um tema aplicado aos templates genéricos. Requer o grafo de elementos
+e movimentos de [PIXEL_NIGHT_PRODUCTION.md](PIXEL_NIGHT_PRODUCTION.md).

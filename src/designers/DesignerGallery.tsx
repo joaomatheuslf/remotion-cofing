@@ -1,4 +1,6 @@
 import React from "react";
+import {PixelScene} from "../pixel/PixelScene";
+import {designerPixelNight} from "../engine/designerDemo";
 import {AbsoluteFill, Series, spring, useCurrentFrame, useVideoConfig} from "remotion";
 import {DesignerProvider, useDesigner} from "./DesignerProvider";
 import {listDesigners} from "./registry";
@@ -18,6 +20,7 @@ const Preview: React.FC<{designer:DesignerDefinition; index:number}> = ({
     config:{damping:14,stiffness:170,mass:.8},
   });
 
+  if(designer.id==="pixel-night")return <PixelScene scene={designerPixelNight.scenes[0]}/>;
   return (
     <DesignerProvider designerId={designer.id}>
       <AbsoluteFill style={{
