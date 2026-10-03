@@ -34,6 +34,12 @@ O título da página HTML, o seletor da aula ou uma legenda externa não substit
 o tema visível no primeiro slide. Faça o título em texto nativo, dentro da área
 segura, sem cobrir a demonstração; revele-o no início da animação e deixe tempo
 para leitura. Use a grafia correta dos conceitos.
+Na etapa de storyboard, gere a abertura como **imagem inteira no canvas 5:4** já
+composta com espaço para título, pergunta, João e mecanismo visual. Não recorte
+um quadrante de uma folha nem remende a falta de espaço com uma faixa sobre a
+arte: isso cobre objetos e quebra o enquadramento. Revise o slide completo no
+celular. Após aprovação, reconstrua título e objetos como partes separadas para
+a animação; o texto embutido na imagem de aprovação não vira o asset final.
 
 ## Aula 01: ordem corrigida
 
