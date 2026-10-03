@@ -466,6 +466,9 @@ O agente chama a ferramenta, revisa e salva cada objeto; o motor monta e anima.
 
 ## Direção das mini aulas
 
+As sete aulas Pixel Night com cenas separadas, modo slides animado e exportação
+em vídeo estão documentadas em [`docs/IA_SERIES_ANIMATION.md`](docs/IA_SERIES_ANIMATION.md).
+
 Para a série Pixel Night do guarda-chuva da IA, o modelo de oito slides com
 momentos visuais e explicações intercaladas está em
 [`docs/EIGHT_SLIDE_STORYBOARD.md`](docs/EIGHT_SLIDE_STORYBOARD.md). A aula 01 é

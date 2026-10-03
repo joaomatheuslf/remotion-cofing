@@ -1,0 +1,3266 @@
+{
+  "mode": "production",
+  "id": "aula-03",
+  "title": "Redes neurais",
+  "designerId": "pixel-night",
+  "scenes": [
+    {
+      "id": "aula-3-visual-1",
+      "kind": "diagram",
+      "title": "REDES NEURAIS",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre IMAGEM e NÚMEROS na aula de Redes neurais.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "REDES NEURAIS",
+              "font": "body",
+              "fontSize": 43,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "Como as conexões aprendem?",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/cat.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "network-node-0-0",
+              "type": "rect",
+              "role": "node",
+              "x": 780,
+              "y": 350,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-0-1",
+              "type": "rect",
+              "role": "node",
+              "x": 780,
+              "y": 425,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-0-2",
+              "type": "rect",
+              "role": "node",
+              "x": 780,
+              "y": 500,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-1-0",
+              "type": "rect",
+              "role": "node",
+              "x": 864,
+              "y": 350,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#ffdc58",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1.8,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-1-1",
+              "type": "rect",
+              "role": "node",
+              "x": 864,
+              "y": 425,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#ffdc58",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1.8,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-1-2",
+              "type": "rect",
+              "role": "node",
+              "x": 864,
+              "y": 500,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#ffdc58",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1.8,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-2-0",
+              "type": "rect",
+              "role": "node",
+              "x": 948,
+              "y": 350,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 2.6,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-2-1",
+              "type": "rect",
+              "role": "node",
+              "x": 948,
+              "y": 425,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 2.6,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-2-2",
+              "type": "rect",
+              "role": "node",
+              "x": 948,
+              "y": 500,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 2.6,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-wire-0-0-0",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-0-0-1",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-0-2",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 150
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-1-0",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-1-1",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 437,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-0-1-2",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-2-0",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 150
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-2-1",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-2-2",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 512,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-1-0-0",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-1-0-1",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-0-2",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 150
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-1-0",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-1-1",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 437,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-1-1-2",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-2-0",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 150
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-2-1",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-2-2",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 512,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-propagation",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal network-propagation percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2.2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 792,
+                    "y": 362
+                  },
+                  {
+                    "x": 876,
+                    "y": 437
+                  },
+                  {
+                    "x": 960,
+                    "y": 362
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "IMAGEM",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "NÚMEROS",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: IMAGEM para NÚMEROS.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-text-1",
+      "kind": "explain",
+      "title": "ENTRADA",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar entrada com texto progressivo e reforço visual do conceito NÚMEROS.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 03  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "ENTRADA",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Uma imagem é convertida em valores numéricos. A rede recebe esses valores como entrada, não a ideia pronta de “gato”.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "Imagem → números.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/network.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-visual-2",
+      "kind": "diagram",
+      "title": "CONEXÕES",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre ENTRADA e CONEXÕES na aula de Redes neurais.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "CONEXÕES",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "O sinal percorre a rede.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/cat.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "network-node-0-0",
+              "type": "rect",
+              "role": "node",
+              "x": 780,
+              "y": 350,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-0-1",
+              "type": "rect",
+              "role": "node",
+              "x": 780,
+              "y": 425,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-0-2",
+              "type": "rect",
+              "role": "node",
+              "x": 780,
+              "y": 500,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-1-0",
+              "type": "rect",
+              "role": "node",
+              "x": 864,
+              "y": 350,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#ffdc58",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1.8,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-1-1",
+              "type": "rect",
+              "role": "node",
+              "x": 864,
+              "y": 425,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#ffdc58",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1.8,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-1-2",
+              "type": "rect",
+              "role": "node",
+              "x": 864,
+              "y": 500,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#ffdc58",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 1.8,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-2-0",
+              "type": "rect",
+              "role": "node",
+              "x": 948,
+              "y": 350,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 2.6,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-2-1",
+              "type": "rect",
+              "role": "node",
+              "x": 948,
+              "y": 425,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 2.6,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-node-2-2",
+              "type": "rect",
+              "role": "node",
+              "x": 948,
+              "y": 500,
+              "width": 24,
+              "height": 24,
+              "z": 7,
+              "fill": "#21e7f4",
+              "stroke": "#d8faff",
+              "strokeWidth": 4,
+              "radius": 12,
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "O nó acende quando recebe um sinal de outra camada.",
+                "start": 2.6,
+                "end": 19.5,
+                "period": 2.4
+              }
+            },
+            {
+              "id": "network-wire-0-0-0",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-0-0-1",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-0-2",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 150
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-1-0",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-1-1",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 437,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-0-1-2",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-2-0",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 150
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-2-1",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-0-2-2",
+              "type": "path",
+              "role": "connection",
+              "x": 792,
+              "y": 512,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-1-0-0",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-1-0-1",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-0-2",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 150
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-1-0",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-1-1",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 437,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-wire-1-1-2",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 75
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-2-0",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 362,
+              "width": 92,
+              "height": 158,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 150
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-2-1",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 437,
+              "width": 92,
+              "height": 83,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 75
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#2b86bc",
+              "strokeWidth": 2
+            },
+            {
+              "id": "network-wire-1-2-2",
+              "type": "path",
+              "role": "connection",
+              "x": 876,
+              "y": 512,
+              "width": 92,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 84,
+                  "y": 0
+                }
+              ],
+              "stroke": "#ffdc58",
+              "strokeWidth": 4
+            },
+            {
+              "id": "network-propagation",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal network-propagation percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2.2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 792,
+                    "y": 362
+                  },
+                  {
+                    "x": 876,
+                    "y": 437
+                  },
+                  {
+                    "x": 960,
+                    "y": 362
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "ENTRADA",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "CONEXÕES",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: ENTRADA para CONEXÕES.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-text-2",
+      "kind": "explain",
+      "title": "CONEXÕES",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar conexões com texto progressivo e reforço visual do conceito CONEXÕES.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 03  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "CONEXÕES",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "As unidades recebem números, combinam os sinais e passam resultados pelas conexões para outras camadas.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "O sinal percorre a rede.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/network.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-visual-3",
+      "kind": "diagram",
+      "title": "AJUSTES",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre PESOS e AJUSTES na aula de Redes neurais.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "AJUSTES",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "As conexões não têm sempre a mesma força.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/network.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/cat-result.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "PESOS",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "AJUSTES",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: PESOS para AJUSTES.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-text-3",
+      "kind": "explain",
+      "title": "AJUSTES",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar ajustes com texto progressivo e reforço visual do conceito AJUSTES.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 03  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "AJUSTES",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Quando a resposta sai errada, o treinamento altera a força das conexões. Esses valores ajustáveis são os pesos.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "As conexões não têm sempre a mesma força.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/cat-result.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-visual-4",
+      "kind": "diagram",
+      "title": "RESULTADO",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre SINAL e GATO na aula de Redes neurais.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "RESULTADO",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "É reconhecimento de padrões.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/cat.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/cat-result.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "SINAL",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "GATO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: SINAL para GATO.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-3-text-4",
+      "kind": "explain",
+      "title": "RESULTADO",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar resultado com texto progressivo e reforço visual do conceito GATO.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 03  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "RESULTADO",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Depois de muitos ajustes, a rede pode indicar que a imagem provavelmente mostra um gato.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "É reconhecimento de padrões.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/cat-result.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

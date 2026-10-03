@@ -1,0 +1,198 @@
+[
+  {
+    "id": "aula-01",
+    "name": "O guarda-chuva da IA",
+    "openingTitle": "GUARDA-CHUVA DA IA",
+    "question": "O que é IA e por que esse nome?",
+    "pairs": [
+      {
+        "title": "POR QUE GUARDA-CHUVA?",
+        "body": "Porque IA reúne muitas maneiras de construir sistemas. O guarda-chuva é uma comparação didática para mostrar esse conjunto.",
+        "takeaway": "A analogia não tem origem única documentada."
+      },
+      {
+        "title": "O QUE É IA?",
+        "body": "Inteligência artificial é a área que cria sistemas capazes de reconhecer, prever, responder ou planejar.",
+        "takeaway": "É um campo de estudo, não uma ferramenta só."
+      },
+      {
+        "title": "QUEM DEU O NOME?",
+        "body": "John McCarthy deu o nome à área numa proposta de 1955, escrita com Minsky, Rochester e Shannon. Em 1956, o grupo se reuniu em Dartmouth.",
+        "takeaway": "1955: proposta. 1956: encontro."
+      },
+      {
+        "title": "MUITAS TÉCNICAS",
+        "body": "Debaixo desse guarda-chuva há muitos métodos e conceitos. Nas próximas mini aulas, vamos entender machine learning, redes neurais e tokenização.",
+        "takeaway": "Uma ideia por vez."
+      }
+    ]
+  },
+  {
+    "id": "aula-02",
+    "name": "Machine learning",
+    "openingTitle": "MACHINE LEARNING",
+    "question": "Como a máquina aprende com exemplos?",
+    "pairs": [
+      {
+        "title": "EXEMPLOS",
+        "body": "Para ensinar um filtro, mostramos mensagens já marcadas como spam ou normais. Esses exemplos servem de referência.",
+        "takeaway": "Dados e rótulos iniciam o treinamento."
+      },
+      {
+        "title": "TREINAMENTO",
+        "body": "O modelo procura padrões nos exemplos e ajusta seus parâmetros para reduzir os erros. Não recebe uma regra para cada mensagem possível.",
+        "takeaway": "Aprender é ajustar o modelo."
+      },
+      {
+        "title": "NOVO E-MAIL",
+        "body": "Depois, chega uma mensagem que não estava nos exemplos. O teste real é lidar bem com casos novos.",
+        "takeaway": "Generalizar vai além de decorar."
+      },
+      {
+        "title": "PREVISÃO",
+        "body": "O modelo estima qual categoria é mais provável e pode errar. A qualidade e a variedade dos dados afetam o resultado.",
+        "takeaway": "Previsão não é certeza."
+      }
+    ]
+  },
+  {
+    "id": "aula-03",
+    "name": "Redes neurais",
+    "openingTitle": "REDES NEURAIS",
+    "question": "Como as conexões aprendem?",
+    "pairs": [
+      {
+        "title": "ENTRADA",
+        "body": "Uma imagem é convertida em valores numéricos. A rede recebe esses valores como entrada, não a ideia pronta de “gato”.",
+        "takeaway": "Imagem → números."
+      },
+      {
+        "title": "CONEXÕES",
+        "body": "As unidades recebem números, combinam os sinais e passam resultados pelas conexões para outras camadas.",
+        "takeaway": "O sinal percorre a rede."
+      },
+      {
+        "title": "AJUSTES",
+        "body": "Quando a resposta sai errada, o treinamento altera a força das conexões. Esses valores ajustáveis são os pesos.",
+        "takeaway": "As conexões não têm sempre a mesma força."
+      },
+      {
+        "title": "RESULTADO",
+        "body": "Depois de muitos ajustes, a rede pode indicar que a imagem provavelmente mostra um gato.",
+        "takeaway": "É reconhecimento de padrões."
+      }
+    ]
+  },
+  {
+    "id": "aula-04",
+    "name": "Deep learning",
+    "openingTitle": "DEEP LEARNING",
+    "question": "Por que várias camadas?",
+    "pairs": [
+      {
+        "title": "CAMADAS",
+        "body": "Deep learning usa redes neurais com várias camadas internas. “Profundo” descreve essa estrutura.",
+        "takeaway": "É uma parte do machine learning."
+      },
+      {
+        "title": "BORDAS",
+        "body": "Em uma imagem, etapas iniciais podem captar sinais simples, como linhas, contrastes e bordas.",
+        "takeaway": "Primeiro: padrões simples."
+      },
+      {
+        "title": "FORMAS",
+        "body": "Outras etapas combinam esses sinais em formas mais úteis, como olhos, orelhas e contornos.",
+        "takeaway": "Depois: combinações de padrões."
+      },
+      {
+        "title": "RECONHECER",
+        "body": "Ao final, o sistema pode classificar a imagem. Redes profundas exigem dados e recursos; mais camadas não garantem melhor solução.",
+        "takeaway": "A tarefa define a técnica."
+      }
+    ]
+  },
+  {
+    "id": "aula-05",
+    "name": "IA generativa",
+    "openingTitle": "IA GENERATIVA",
+    "question": "Como ela cria novos conteúdos?",
+    "pairs": [
+      {
+        "title": "PEDIDO",
+        "body": "Você descreve o que quer criar. O pedido orienta o sistema, como uma casa ao pôr do sol.",
+        "takeaway": "O pedido guia a geração."
+      },
+      {
+        "title": "PADRÕES",
+        "body": "No treinamento, o modelo aprende relações presentes em muitos exemplos. Ele usa esses padrões para produzir uma saída.",
+        "takeaway": "Gerar depende do que foi aprendido."
+      },
+      {
+        "title": "GERAÇÃO",
+        "body": "Conforme a técnica, a saída pode ser texto, imagem, áudio ou vídeo. IA generativa é uma categoria ampla.",
+        "takeaway": "Há diferentes modelos generativos."
+      },
+      {
+        "title": "CONFERÊNCIA",
+        "body": "Um resultado pode parecer convincente e ainda conter erros. Confira fatos, detalhes e adequação ao pedido.",
+        "takeaway": "Gerar não garante acertar."
+      }
+    ]
+  },
+  {
+    "id": "aula-06",
+    "name": "LLMs",
+    "openingTitle": "O QUE SÃO LLMs?",
+    "question": "Como um modelo de linguagem responde?",
+    "pairs": [
+      {
+        "title": "LINGUAGEM",
+        "body": "LLM é um grande modelo de linguagem. Ele processa texto para produzir respostas, resumos, traduções e outras tarefas.",
+        "takeaway": "É um tipo de modelo generativo."
+      },
+      {
+        "title": "TOKENS",
+        "body": "O texto é dividido em pedaços chamados tokens. Eles podem corresponder a palavras, partes de palavras ou sinais.",
+        "takeaway": "O texto vira unidades de processamento."
+      },
+      {
+        "title": "PRÓXIMO",
+        "body": "A partir do contexto, o modelo estima qual token pode vir em seguida. Várias continuações são possíveis.",
+        "takeaway": "O contexto muda a previsão."
+      },
+      {
+        "title": "RESPOSTA",
+        "body": "A previsão se repete, token por token, até formar a resposta. Uma frase fluente ainda pode conter um erro factual.",
+        "takeaway": "Confira informações importantes."
+      }
+    ]
+  },
+  {
+    "id": "aula-07",
+    "name": "Modelos de difusão",
+    "openingTitle": "MODELOS DE DIFUSÃO",
+    "question": "Como uma imagem surge do ruído?",
+    "pairs": [
+      {
+        "title": "APRENDER",
+        "body": "Durante o treinamento, o modelo aprende a reverter um processo que adiciona ruído aos exemplos.",
+        "takeaway": "Ele aprende a reduzir o ruído."
+      },
+      {
+        "title": "RUÍDO",
+        "body": "Na geração de uma imagem, o processo pode começar com ruído. Uma descrição orienta o resultado desejado.",
+        "takeaway": "Ruído + orientação do pedido."
+      },
+      {
+        "title": "REFINAR",
+        "body": "Em várias etapas, o modelo transforma o padrão inicial em formas cada vez mais coerentes com o pedido.",
+        "takeaway": "A imagem surge gradualmente."
+      },
+      {
+        "title": "IMAGEM",
+        "body": "O resultado é uma nova imagem calculada pelo modelo. Não havia uma foto pronta escondida no ruído.",
+        "takeaway": "Observe os detalhes antes de usar."
+      }
+    ]
+  }
+]

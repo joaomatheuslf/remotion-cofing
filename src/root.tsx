@@ -18,7 +18,15 @@ import {StoryboardSheet} from "./storyboard/StoryboardSheet";
 
 import type {Lesson} from "./engine/types";
 import pixelLessonJson from "../public/lessons/pixel-night/lesson.json";
+import aula01 from "../public/lessons/ia-series/aula-01.json";
+import aula02 from "../public/lessons/ia-series/aula-02.json";
+import aula03 from "../public/lessons/ia-series/aula-03.json";
+import aula04 from "../public/lessons/ia-series/aula-04.json";
+import aula05 from "../public/lessons/ia-series/aula-05.json";
+import aula06 from "../public/lessons/ia-series/aula-06.json";
+import aula07 from "../public/lessons/ia-series/aula-07.json";
 const pixelLayeredLesson=pixelLessonJson as Lesson;
+const iaSeries=[aula01,aula02,aula03,aula04,aula05,aula06,aula07] as Lesson[];
 
 const frames = (seconds:number) => Math.round(seconds * 30);
 const lessonDuration = (scenes:{duration:number}[]) =>
@@ -26,6 +34,7 @@ const lessonDuration = (scenes:{duration:number}[]) =>
 
 export const Root: React.FC = () => (
   <>
+    {iaSeries.map((lesson,index)=><Composition key={lesson.id} id={`AulaIA0${index+1}`} component={LessonComposition} width={1080} height={864} fps={30} durationInFrames={lessonDuration(lesson.scenes)} defaultProps={{lesson}}/>)}
     <Composition id="Pixel18LayeredIA" component={LessonComposition} width={1080} height={864} fps={30} durationInFrames={4500} defaultProps={{lesson:pixelLayeredLesson}}/>
     <Composition id="PixelNightStoryboardA" component={StoryboardSheet} width={1080} height={864} fps={30} durationInFrames={180} defaultProps={{lesson:{...pixelLayeredLesson,scenes:pixelLayeredLesson.scenes.slice(0,9)}}}/>
     <Composition id="PixelNightStoryboardB" component={StoryboardSheet} width={1080} height={864} fps={30} durationInFrames={180} defaultProps={{lesson:{...pixelLayeredLesson,scenes:pixelLayeredLesson.scenes.slice(9)}}}/>

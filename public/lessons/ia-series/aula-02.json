@@ -1,0 +1,2048 @@
+{
+  "mode": "production",
+  "id": "aula-02",
+  "title": "Machine learning",
+  "designerId": "pixel-night",
+  "scenes": [
+    {
+      "id": "aula-2-visual-1",
+      "kind": "diagram",
+      "title": "MACHINE LEARNING",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre EXEMPLOS e RÓTULOS na aula de Machine learning.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "MACHINE LEARNING",
+              "font": "body",
+              "fontSize": 43,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "Como a máquina aprende com exemplos?",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/emails.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "EXEMPLOS",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "RÓTULOS",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: EXEMPLOS para RÓTULOS.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-text-1",
+      "kind": "explain",
+      "title": "EXEMPLOS",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar exemplos com texto progressivo e reforço visual do conceito RÓTULOS.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 02  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "EXEMPLOS",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Para ensinar um filtro, mostramos mensagens já marcadas como spam ou normais. Esses exemplos servem de referência.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "Dados e rótulos iniciam o treinamento.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-visual-2",
+      "kind": "diagram",
+      "title": "TREINAMENTO",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre TREINO e AJUSTE na aula de Machine learning.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "TREINAMENTO",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "Aprender é ajustar o modelo.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/emails.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/training.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "TREINO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "AJUSTE",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: TREINO para AJUSTE.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-text-2",
+      "kind": "explain",
+      "title": "TREINAMENTO",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar treinamento com texto progressivo e reforço visual do conceito AJUSTE.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 02  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "TREINAMENTO",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "O modelo procura padrões nos exemplos e ajusta seus parâmetros para reduzir os erros. Não recebe uma regra para cada mensagem possível.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "Aprender é ajustar o modelo.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/training.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-visual-3",
+      "kind": "diagram",
+      "title": "NOVO E-MAIL",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre E-MAIL NOVO e TESTE na aula de Machine learning.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "NOVO E-MAIL",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "Generalizar vai além de decorar.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/emails.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "E-MAIL NOVO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "TESTE",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: E-MAIL NOVO para TESTE.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-text-3",
+      "kind": "explain",
+      "title": "NOVO E-MAIL",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar novo e-mail com texto progressivo e reforço visual do conceito TESTE.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 02  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "NOVO E-MAIL",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Depois, chega uma mensagem que não estava nos exemplos. O teste real é lidar bem com casos novos.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "Generalizar vai além de decorar.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-visual-4",
+      "kind": "diagram",
+      "title": "PREVISÃO",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre PADRÃO e PREVISÃO na aula de Machine learning.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "PREVISÃO",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "Previsão não é certeza.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/training.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/emails.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "PADRÃO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "PREVISÃO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: PADRÃO para PREVISÃO.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-2-text-4",
+      "kind": "explain",
+      "title": "PREVISÃO",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar previsão com texto progressivo e reforço visual do conceito PREVISÃO.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 02  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "PREVISÃO",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "O modelo estima qual categoria é mais provável e pode errar. A qualidade e a variedade dos dados afetam o resultado.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "Previsão não é certeza.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/emails.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

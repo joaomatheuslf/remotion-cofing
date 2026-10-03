@@ -1,0 +1,2068 @@
+{
+  "mode": "production",
+  "id": "aula-01",
+  "title": "O guarda-chuva da IA",
+  "designerId": "pixel-night",
+  "scenes": [
+    {
+      "id": "aula-1-visual-1",
+      "kind": "diagram",
+      "title": "GUARDA-CHUVA DA IA",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre MUITAS FORMAS e UM CAMPO na aula de O guarda-chuva da IA.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "GUARDA-CHUVA DA IA",
+              "font": "body",
+              "fontSize": 43,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "O que é IA e por que esse nome?",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "umbrella",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 330,
+              "y": 290,
+              "width": 640,
+              "height": 215,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/umbrella.png",
+              "motion": {
+                "type": "sway",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento umbrella para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 3
+              }
+            },
+            {
+              "id": "icon-a",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 410,
+              "y": 514,
+              "width": 130,
+              "height": 130,
+              "z": 6,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento icon-a para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "icon-b",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 630,
+              "y": 514,
+              "width": 130,
+              "height": 130,
+              "z": 6,
+              "asset": "lessons/ia-series/assets/generator.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento icon-b para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "umbrella-link",
+              "type": "path",
+              "role": "connection",
+              "x": 504,
+              "y": 558,
+              "width": 328,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 320,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "meaning-flow",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal meaning-flow percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 510,
+                    "y": 566
+                  },
+                  {
+                    "x": 824,
+                    "y": 566
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "MUITAS FORMAS",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "UM CAMPO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: MUITAS FORMAS para UM CAMPO.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-text-1",
+      "kind": "explain",
+      "title": "POR QUE GUARDA-CHUVA?",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar por que guarda-chuva? com texto progressivo e reforço visual do conceito UM CAMPO.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 01  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "POR QUE GUARDA-CHUVA?",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Porque IA reúne muitas maneiras de construir sistemas. O guarda-chuva é uma comparação didática para mostrar esse conjunto.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "A analogia não tem origem única documentada.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-visual-2",
+      "kind": "diagram",
+      "title": "O QUE É IA?",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre RECONHECER e PLANEJAR na aula de O guarda-chuva da IA.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "O QUE É IA?",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "É um campo de estudo, não uma ferramenta só.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/robot.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/generator.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "RECONHECER",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "PLANEJAR",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: RECONHECER para PLANEJAR.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-text-2",
+      "kind": "explain",
+      "title": "O QUE É IA?",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar o que é ia? com texto progressivo e reforço visual do conceito PLANEJAR.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 01  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "O QUE É IA?",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Inteligência artificial é a área que cria sistemas capazes de reconhecer, prever, responder ou planejar.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "É um campo de estudo, não uma ferramenta só.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/generator.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-visual-3",
+      "kind": "diagram",
+      "title": "QUEM DEU O NOME?",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre 1955: PROPOSTA e 1956: ENCONTRO na aula de O guarda-chuva da IA.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "QUEM DEU O NOME?",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "1955: proposta. 1956: encontro.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/emails.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/training.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "1955: PROPOSTA",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "1956: ENCONTRO",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: 1955: PROPOSTA para 1956: ENCONTRO.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-text-3",
+      "kind": "explain",
+      "title": "QUEM DEU O NOME?",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar quem deu o nome? com texto progressivo e reforço visual do conceito 1956: ENCONTRO.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 01  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "QUEM DEU O NOME?",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "John McCarthy deu o nome à área numa proposta de 1955, escrita com Minsky, Rochester e Shannon. Em 1956, o grupo se reuniu em Dartmouth.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "1955: proposta. 1956: encontro.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/training.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-visual-4",
+      "kind": "diagram",
+      "title": "MUITAS TÉCNICAS",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "presenter": {
+            "characterId": "joao-matheus",
+            "referenceIds": [
+              "joao-orange-polo"
+            ],
+            "treatment": "João Matheus em pixel art, óculos, cabelo curto e barba grisalha; corpo e braço independentes."
+          },
+          "teachingGoal": "Mostrar em movimento a relação entre REGRAS + DADOS e SOB A IA na aula de O guarda-chuva da IA.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 46,
+              "y": 42,
+              "width": 988,
+              "height": 178,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 69,
+              "y": 58,
+              "width": 940,
+              "height": 68,
+              "z": 1,
+              "text": "MUITAS TÉCNICAS",
+              "font": "body",
+              "fontSize": 48,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "subtitle",
+              "type": "text",
+              "role": "caption",
+              "x": 72,
+              "y": 134,
+              "width": 925,
+              "height": 67,
+              "z": 2,
+              "text": "Uma ideia por vez.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar subtitle na ordem da explicação.",
+                "start": 0.7,
+                "end": 20
+              }
+            },
+            {
+              "id": "joao-body",
+              "type": "sprite",
+              "role": "presenter-body",
+              "x": 60,
+              "y": 364,
+              "width": 280,
+              "height": 370,
+              "z": 12,
+              "asset": "lessons/pixel-18-layers/joao-body.png"
+            },
+            {
+              "id": "joao-arm",
+              "type": "sprite",
+              "role": "presenter-arm",
+              "parent": "joao-body",
+              "pivot": {
+                "x": 166,
+                "y": 240
+              },
+              "x": 0,
+              "y": 0,
+              "width": 280,
+              "height": 370,
+              "z": 13,
+              "asset": "lessons/pixel-18-layers/joao-arm.png",
+              "motion": {
+                "type": "gesture",
+                "purpose": "teaching",
+                "explanation": "João aponta para o mecanismo no ritmo da explicação.",
+                "start": 0,
+                "end": 20,
+                "period": 3.5,
+                "amplitude": 6
+              }
+            },
+            {
+              "id": "input",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 380,
+              "y": 322,
+              "width": 235,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/umbrella.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento input para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "result",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 770,
+              "y": 322,
+              "width": 225,
+              "height": 235,
+              "z": 5,
+              "asset": "lessons/ia-series/assets/network.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento result para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            },
+            {
+              "id": "flow",
+              "type": "path",
+              "role": "connection",
+              "x": 599,
+              "y": 435,
+              "width": 213,
+              "height": 8,
+              "z": 7,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 205,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "flow-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal flow-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 1.3,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 607,
+                    "y": 440
+                  },
+                  {
+                    "x": 793,
+                    "y": 440
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "input-label",
+              "type": "text",
+              "role": "caption",
+              "x": 383,
+              "y": 604,
+              "width": 245,
+              "height": 70,
+              "z": 10,
+              "text": "REGRAS + DADOS",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar input-label na ordem da explicação.",
+                "start": 2,
+                "end": 20
+              }
+            },
+            {
+              "id": "result-label",
+              "type": "text",
+              "role": "caption",
+              "x": 769,
+              "y": 604,
+              "width": 260,
+              "height": 70,
+              "z": 10,
+              "text": "SOB A IA",
+              "font": "body",
+              "fontSize": 22,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar result-label na ordem da explicação.",
+                "start": 4,
+                "end": 20
+              }
+            },
+            {
+              "id": "progress-track",
+              "type": "rect",
+              "role": "illustration",
+              "x": 390,
+              "y": 696,
+              "width": 575,
+              "height": 21,
+              "z": 3,
+              "fill": "#092b4c",
+              "stroke": "#22597b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "process-progress",
+              "type": "rect",
+              "role": "illustration",
+              "x": 396,
+              "y": 702,
+              "width": 560,
+              "height": 9,
+              "z": 4,
+              "fill": "#ffdc58",
+              "stroke": "#ffdc58",
+              "strokeWidth": 4,
+              "motion": {
+                "type": "fill",
+                "purpose": "teaching",
+                "explanation": "A barra acompanha a transformação: REGRAS + DADOS para SOB A IA.",
+                "start": 2,
+                "end": 17
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "id": "aula-1-text-4",
+      "kind": "explain",
+      "title": "MUITAS TÉCNICAS",
+      "duration": 20,
+      "data": {
+        "pixelScene": {
+          "version": 1,
+          "designer": "pixel-night",
+          "canvas": {
+            "width": 1080,
+            "height": 864,
+            "fps": 30
+          },
+          "teachingGoal": "Explicar muitas técnicas com texto progressivo e reforço visual do conceito SOB A IA.",
+          "background": {
+            "color": "#061a37",
+            "asset": "lessons/pixel-18-layers/night-background.png"
+          },
+          "elements": [
+            {
+              "id": "header",
+              "type": "rect",
+              "role": "illustration",
+              "x": 45,
+              "y": 40,
+              "width": 990,
+              "height": 175,
+              "z": 0,
+              "fill": "#071c39",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "number",
+              "type": "text",
+              "role": "caption",
+              "x": 74,
+              "y": 58,
+              "width": 920,
+              "height": 52,
+              "z": 1,
+              "text": "AULA 01  /  EXPLICAÇÃO",
+              "font": "body",
+              "fontSize": 24,
+              "color": "#21e7f4",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar number na ordem da explicação.",
+                "start": 0,
+                "end": 20
+              }
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "role": "title",
+              "x": 74,
+              "y": 111,
+              "width": 930,
+              "height": 75,
+              "z": 2,
+              "text": "MUITAS TÉCNICAS",
+              "font": "body",
+              "fontSize": 46,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar title na ordem da explicação.",
+                "start": 0.4,
+                "end": 20
+              }
+            },
+            {
+              "id": "copy-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 68,
+              "y": 244,
+              "width": 944,
+              "height": 347,
+              "z": 3,
+              "fill": "#07172f",
+              "stroke": "#1b719b",
+              "strokeWidth": 4
+            },
+            {
+              "id": "body",
+              "type": "text",
+              "role": "copy",
+              "x": 100,
+              "y": 273,
+              "width": 850,
+              "height": 278,
+              "z": 4,
+              "text": "Debaixo desse guarda-chuva há muitos métodos e conceitos. Nas próximas mini aulas, vamos entender machine learning, redes neurais e tokenização.",
+              "font": "body",
+              "fontSize": 34,
+              "color": "#f4f9ff",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar body na ordem da explicação.",
+                "start": 1.2,
+                "end": 20
+              }
+            },
+            {
+              "id": "teaching-path",
+              "type": "path",
+              "role": "connection",
+              "x": 140,
+              "y": 618,
+              "width": 733,
+              "height": 8,
+              "z": 5,
+              "points": [
+                {
+                  "x": 0,
+                  "y": 0
+                },
+                {
+                  "x": 725,
+                  "y": 0
+                }
+              ],
+              "stroke": "#21e7f4",
+              "strokeWidth": 5
+            },
+            {
+              "id": "key-signal",
+              "type": "rect",
+              "role": "signal",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "z": 9,
+              "fill": "#ffdc58",
+              "stroke": "#fff6b0",
+              "strokeWidth": 2,
+              "motion": {
+                "type": "signal",
+                "purpose": "teaching",
+                "explanation": "O sinal key-signal percorre de fato a conexão entre entrada, transformação e saída.",
+                "start": 2,
+                "end": 19.5,
+                "path": [
+                  {
+                    "x": 155,
+                    "y": 624
+                  },
+                  {
+                    "x": 855,
+                    "y": 624
+                  }
+                ],
+                "period": 3.2
+              }
+            },
+            {
+              "id": "takeaway-panel",
+              "type": "rect",
+              "role": "illustration",
+              "x": 89,
+              "y": 655,
+              "width": 900,
+              "height": 102,
+              "z": 4,
+              "fill": "#0d3551",
+              "stroke": "#21e7f4",
+              "strokeWidth": 4
+            },
+            {
+              "id": "takeaway",
+              "type": "text",
+              "role": "caption",
+              "x": 116,
+              "y": 681,
+              "width": 842,
+              "height": 65,
+              "z": 7,
+              "text": "Uma ideia por vez.",
+              "font": "body",
+              "fontSize": 27,
+              "color": "#ffdc58",
+              "motion": {
+                "type": "reveal",
+                "purpose": "teaching",
+                "explanation": "Revelar takeaway na ordem da explicação.",
+                "start": 5,
+                "end": 20
+              }
+            },
+            {
+              "id": "topic-icon",
+              "type": "sprite",
+              "role": "illustration",
+              "x": 852,
+              "y": 507,
+              "width": 120,
+              "height": 100,
+              "z": 8,
+              "asset": "lessons/ia-series/assets/network.png",
+              "motion": {
+                "type": "pulse",
+                "purpose": "teaching",
+                "explanation": "Mover o elemento topic-icon para representar a etapa explicada.",
+                "start": 0.3,
+                "end": 19.5,
+                "period": 3,
+                "amplitude": 4
+              }
+            }
+          ]
+        }
+      }
+    }
+  ]
+}

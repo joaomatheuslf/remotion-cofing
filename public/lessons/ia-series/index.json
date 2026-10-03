@@ -1,0 +1,44 @@
+[
+  {
+    "id": "aula-01",
+    "title": "O guarda-chuva da IA",
+    "file": "public/lessons/ia-series/aula-01.json",
+    "scenes": 8
+  },
+  {
+    "id": "aula-02",
+    "title": "Machine learning",
+    "file": "public/lessons/ia-series/aula-02.json",
+    "scenes": 8
+  },
+  {
+    "id": "aula-03",
+    "title": "Redes neurais",
+    "file": "public/lessons/ia-series/aula-03.json",
+    "scenes": 8
+  },
+  {
+    "id": "aula-04",
+    "title": "Deep learning",
+    "file": "public/lessons/ia-series/aula-04.json",
+    "scenes": 8
+  },
+  {
+    "id": "aula-05",
+    "title": "IA generativa",
+    "file": "public/lessons/ia-series/aula-05.json",
+    "scenes": 8
+  },
+  {
+    "id": "aula-06",
+    "title": "LLMs",
+    "file": "public/lessons/ia-series/aula-06.json",
+    "scenes": 8
+  },
+  {
+    "id": "aula-07",
+    "title": "Modelos de difusão",
+    "file": "public/lessons/ia-series/aula-07.json",
+    "scenes": 8
+  }
+]

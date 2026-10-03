@@ -33,7 +33,10 @@
     "test:production": "node --import ./tests/register-typescript.mjs --test tests/*test.mjs",
     "production:validate": "node scripts/check-pixel.mjs",
     "asset:request": "node scripts/prepare-image-request.mjs",
-    "references:import": "node scripts/import-private-references.mjs"
+    "references:import": "node scripts/import-private-references.mjs",
+    "series:build": "node scripts/build-ia-series.mjs",
+    "series:html": "python3 scripts/build-ia-series-html.py",
+    "series:video": "node scripts/render-ia-series-local.mjs"
   },
   "dependencies": {
     "@remotion/cli": "4.0.530",
