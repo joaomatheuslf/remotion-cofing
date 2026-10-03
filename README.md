@@ -463,3 +463,11 @@ npm run test:production
 
 `asset:request` prepara os argumentos da ferramenta de imagem com referências reais.
 O agente chama a ferramenta, revisa e salva cada objeto; o motor monta e anima.
+
+## Direção das mini aulas
+
+Uma pergunta central por mini aula, com aproximadamente 2–3 minutos e ritmo
+adequado à fala do João. Primeiro roteiro e estimativa com pausas; depois slides
+e animações. Se o conteúdo não couber, divida o recorte em novas aulas.
+O exemplo de 18 cenas não define a quantidade de slides das próximas produções.
+Guia obrigatório: [MINI_LESSON_DIRECTION.md](docs/MINI_LESSON_DIRECTION.md).

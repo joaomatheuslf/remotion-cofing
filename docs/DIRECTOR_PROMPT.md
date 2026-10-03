@@ -244,3 +244,15 @@ tratamento e anexe as fotos reais à ferramenta de imagem. Leia
 `docs/AUTHORED_PRODUCTION.md`, `docs/ASSET_GENERATION.md` e
 `public/references/joao/profile.json`. Exemplos genéricos deste documento são demos
 do SDK: `mode: "demo"` não é uma saída para a produção.
+
+## Recorte e tempo das mini aulas — obrigatório
+
+Antes do Blueprint, declare uma pergunta central, o que o aluno deve entender ao
+final, o recorte e o que ficará para aulas seguintes. Escreva o roteiro falado e
+verifique seu tempo com pausas, leitura e animações. A referência de João é
+2min40 apenas para guarda-chuva, definição de IA e sua origem: uma visão geral de
+todas as áreas não deve substituir explicações próprias.
+
+A quantidade de slides deriva do roteiro; nunca comprima a fala para caber em
+um storyboard de quantidade fixa. Quando exceder a duração, divida o conteúdo
+em mini aulas. Consulte `docs/MINI_LESSON_DIRECTION.md`.

@@ -1,5 +1,8 @@
 # Produção autoral em todos os estilos
 
+Antes de montar o grafo, aplique o recorte de `MINI_LESSON_DIRECTION.md`: pergunta
+central, roteiro falado e tempo com pausas determinam as cenas.
+
 A versão 0.8 exige um plano de elementos em todos os 13 designers. `mode` é
 `production` por padrão. O modo `demo` mantém exemplos do SDK; é um opt-in explícito
 que não passa no gate de produção. Não entregue demos como aulas finais.

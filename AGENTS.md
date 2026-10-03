@@ -11,9 +11,28 @@ No Blueprint, use `segment.sceneGraph` ou `segment.pixel`. O compilador e o rend
 rejeitam produção sem esse plano. `mode: "demo"` existe somente para demonstrações
 antigas do SDK, identificadas como demo; nunca o use para contornar a produção.
 
+## Recorte obrigatório das mini aulas
+
+- Uma pergunta central e um resultado de aprendizagem por mini aula.
+- Planeje aproximadamente 2–3 minutos, ajustando à explicação e à fala real do João.
+- Calibração relatada por João: explicar a analogia do guarda-chuva, o que é IA e
+  sua origem já ocupou cerca de 2min40. Não encaixe também ML, redes neurais, DL,
+  LLMs e difusão nesse mesmo tempo como se todos estivessem explicados.
+- Conceitos vizinhos podem aparecer como contexto, sem abrir outra explicação.
+  Se precisarem de exemplo ou definição próprios, proponha uma próxima aula.
+- Primeiro escreva a fala simples e completa, estime/ensaie o tempo e inclua pausas
+  e tempo de leitura/animação. Só depois defina cenas, slides e quantidade de assets.
+- Não use um número fixo de slides ou a lista inteira de tópicos para dirigir o roteiro.
+- Se o conteúdo exceder o tempo, reduza o recorte ou divida em aulas; não acelere a
+  fala nem elimine a explicação para conservar todos os tópicos.
+- Cada animação deve ajudar a responder à pergunta da aula. Todos os estilos seguem
+  essa diretriz, independentemente de template, estética ou metáfora.
+
+Guia: `docs/MINI_LESSON_DIRECTION.md`.
+
 ## Ordem de trabalho
 
-1. Roteiro e objetivo de aprendizagem por cena.
+1. Pergunta central, objetivo da mini aula e recorte; roteiro falado e tempo com pausas.
 2. Storyboard com composição, metáfora, assets, ações e duração para revisão do João.
 3. Leia `public/references/joao/profile.json`: direção estética e referências reais.
 4. Gere assets com a ferramenta de imagem, UM objeto por arquivo. Prepare a chamada
